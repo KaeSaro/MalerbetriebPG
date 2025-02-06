@@ -23,9 +23,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Constructa Bau",
-  description:
-    "Ihr Partner für Garten- und Landschaftsbau sowie Tiefbauarbeiten.",
+  title: "Malerbetrieb | Pascal Gerdes",
+  description: "Ihr Partner für Malerarbeiten.",
 
   robots: {
     index: true,
