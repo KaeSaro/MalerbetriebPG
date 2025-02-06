@@ -35,7 +35,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  console.log(montserrat, fira);
   return (
     <html lang="en">
       <head>
