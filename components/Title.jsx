@@ -2,7 +2,7 @@ export function Title({ className, children, withDot }) {
   return (
     <h1
       className={
-        "text-[33px] sm:text-[33px] md:text-[40px] lg:text-[60px] xl:text-[80px] leading-[1.1] font-['Montserrat',_sans-serif] uppercase text-left " +
+        "text-[33px] sm:text-[33px] md:text-[40px] lg:text-[60px] xl:text-[80px] leading-[1.1] font-fira text-left " +
         className
       }
     >

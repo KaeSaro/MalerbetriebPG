@@ -1,29 +1,31 @@
-import { Montserrat, IBM_Plex_Mono } from 'next/font/google';
-import './globals.css';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
+import { Montserrat, IBM_Plex_Mono, Fira_Sans } from "next/font/google";
+import "./globals.css";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
-// IBM Plex Mono mit sans-serif fallback
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ['latin'],
-  variable: '--font-ibm-plex-mono',
-  display: 'swap',
-  weight: ['100', '200', '300', '400', '500', '600', '700'],
-  fallback: ['sans-serif'],
+// fira mit sans-serif fallback
+const fira = Fira_Sans({
+  subsets: ["latin"],
+  variable: "--font-fira",
+  display: "swap",
+  weight: ["500"],
+  fallback: ["sans-serif"],
 });
 
-// Montserrat mit sans-serif fallback
 const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap',
-  weight: ['500'],
-  fallback: ['sans-serif'],
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+  weight: ["200", "300", "400", "500", "600", "700"],
+  // weight: ["400"],
+
+  fallback: ["sans-serif"],
 });
 
 export const metadata = {
-  title: 'Constructa Bau',
-  description: 'Ihr Partner für Garten- und Landschaftsbau sowie Tiefbauarbeiten.',
+  title: "Constructa Bau",
+  description:
+    "Ihr Partner für Garten- und Landschaftsbau sowie Tiefbauarbeiten.",
 
   robots: {
     index: true,
@@ -33,15 +35,16 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  console.log(montserrat, fira);
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${montserrat.variable} ${ibmPlexMono.variable} antialiased`}
+        className={`${fira.variable} ${montserrat.variable} antialiased font-montserrat`}
         style={{
-          fontFamily: 'Arial, Helvetica Neue, Helvetica, sans-serif',
+          fontFamily: "Montserrat, Helvetica Neue, Helvetica, sans-serif",
         }}
       >
         <Header />

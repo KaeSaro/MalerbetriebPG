@@ -1,33 +1,22 @@
+"use client";
+
 import React from "react";
-import { Content } from "../components/Content";
-import { RegularText } from "../components/RegularText";
+import Link from "next/link";
+import CountUp from "react-countup";
+import { Content } from "../../components/Content";
+import { RegularText } from "../../components/RegularText";
+import { Subtitle } from "../../components/Subtitle";
 import Image from "next/image";
-import { Title } from "../components/Title";
-import { Counter } from "@/components/Counter";
-
-const targets = {
-  businessCreationDate: {
-    year: 2017,
-    month: 0,
-    day: 10,
-  },
-  projectsCompleted: 211,
-  satisfiedCustomers: 180,
-  teamMembers: 12,
-};
-
-function getCreationDate() {
-  return new Date(
-    targets.businessCreationDate.year,
-    targets.businessCreationDate.month,
-    targets.businessCreationDate.day,
-    0,
-    0,
-    0
-  );
-}
+import { Title } from "../../components/Title";
 
 const Home = () => {
+  const targets = {
+    yearsInBusiness: 8,
+    projectsCompleted: 211,
+    satisfiedCustomers: 180,
+    teamMembers: 12,
+  };
+
   return (
     <>
       <Content withoutTopMargin>
@@ -92,47 +81,87 @@ const Home = () => {
               </svg>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-8">
               {/* Jahre im Geschäft */}
               <div className="flex flex-col items-center relative">
-                <Title className="text-4xl font-['IBM_Plex_Mono',_sans-serif] ">
-                  <Counter
-                    value={
-                      new Date().getFullYear() - getCreationDate().getFullYear()
-                    }
-                  />
+                <Title className="text-4xl font-['IBM_Plex_Mono',_sans-serif] font-bold">
+                  <CountUp
+                    start={0}
+                    end={targets.yearsInBusiness}
+                    duration={2.5}
+                    separator=""
+                    decimal=","
+                    delay={0.5}
+                    enableScrollSpy={true}
+                    scrollSpyOnce
+                  >
+                    {({ countUpRef }) => <span ref={countUpRef}>0</span>}
+                  </CountUp>
                 </Title>
-                <span className="text-md text-center font-['Montserrat',_sans-serif]">
+                <span className="text-sm uppercase mt-2 text-center font-['Montserrat',_sans-serif]">
                   Jahre Erfahrung
                 </span>
               </div>
 
               {/* Projekte */}
               <div className="flex flex-col items-center relative">
-                <Title className="">
-                  <Counter value={targets.projectsCompleted} />
+                <Title className="font-bold">
+                  <CountUp
+                    start={0}
+                    end={targets.projectsCompleted}
+                    duration={2.5}
+                    separator=""
+                    decimal=","
+                    delay={0.5}
+                    enableScrollSpy={true}
+                    scrollSpyOnce
+                  >
+                    {({ countUpRef }) => <span ref={countUpRef}>0</span>}
+                  </CountUp>
                 </Title>
-                <span className="text-md text-center font-['Montserrat',_sans-serif]">
+                <span className="text-sm uppercase mt-2 text-center font-['Montserrat',_sans-serif]">
                   Projekte Abgeschlossen
                 </span>
               </div>
 
               {/* Zufriedene Kunden */}
               <div className="flex flex-col items-center relative">
-                <Title className="">
-                  <Counter value={targets.satisfiedCustomers} />
+                <Title className="font-bold">
+                  <CountUp
+                    start={0}
+                    end={targets.satisfiedCustomers}
+                    duration={2.5}
+                    separator=""
+                    decimal=","
+                    delay={0.5}
+                    enableScrollSpy={true}
+                    scrollSpyOnce
+                  >
+                    {({ countUpRef }) => <span ref={countUpRef}>0</span>}
+                  </CountUp>
                 </Title>
-                <span className="text-md text-center font-['Montserrat',_sans-serif]">
+                <span className="text-sm uppercase mt-2 text-center font-['Montserrat',_sans-serif]">
                   Zufriedene Kunden
                 </span>
               </div>
 
               {/* Team Mitglieder */}
               <div className="flex flex-col items-center relative">
-                <Title className="">
-                  <Counter value={targets.teamMembers} />
+                <Title className="font-bold">
+                  <CountUp
+                    start={0}
+                    end={targets.teamMembers}
+                    duration={2.5}
+                    separator=""
+                    decimal=","
+                    delay={0.5}
+                    enableScrollSpy={true}
+                    scrollSpyOnce
+                  >
+                    {({ countUpRef }) => <span ref={countUpRef}>0</span>}
+                  </CountUp>
                 </Title>
-                <span className="text-md text-center font-['Montserrat',_sans-serif]">
+                <span className="text-sm uppercase mt-2 text-center font-['Montserrat',_sans-serif]">
                   Team Mitglieder
                 </span>
               </div>
