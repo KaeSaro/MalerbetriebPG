@@ -1,4 +1,4 @@
-import { Montserrat, IBM_Plex_Mono, Fira_Sans } from "next/font/google";
+import { Montserrat, Fira_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
