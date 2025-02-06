@@ -30,10 +30,10 @@ function getCreationDate() {
 const Home = () => {
   return (
     <>
-      <Content withoutTopMargin>
+      <Content>
         <div className="flex flex-col items-start">
           {/* Firmenvorstellung Section */}
-          <div className="flex flex-col flex-col-reverse md:flex-row gap-8 mt-16">
+          <div className="flex flex-col flex-col-reverse md:flex-row gap-8 ">
             {/* Geschäftsführer Bild */}
             <div className="basis-[100vw] md:basis-auto md:h-auto flex-1 relative">
               <Image
@@ -95,41 +95,37 @@ const Home = () => {
             <div className="grid grid-cols-2 gap-6">
               {/* Jahre im Geschäft */}
               <div className="flex flex-col items-center relative">
-                <Title className="text-4xl font-['IBM_Plex_Mono',_sans-serif] ">
+                <Title className="text-6xl">
                   <Counter
                     value={
                       new Date().getFullYear() - getCreationDate().getFullYear()
                     }
                   />
                 </Title>
-                <span className="text-md text-center font-['Montserrat',_sans-serif]">
-                  Jahre Erfahrung
-                </span>
+                <span className="text-md text-center">Jahre Erfahrung</span>
               </div>
 
               {/* Projekte */}
               <div className="flex flex-col items-center relative">
-                <Title className="">
+                <Title>
                   <Counter value={targets.projectsCompleted} />
                 </Title>
-                <span className="text-md text-center font-['Montserrat',_sans-serif]">
+                <span className="text-md text-center">
                   Projekte Abgeschlossen
                 </span>
               </div>
 
               {/* Zufriedene Kunden */}
               <div className="flex flex-col items-center relative">
-                <Title className="">
+                <Title>
                   <Counter value={targets.satisfiedCustomers} />
                 </Title>
-                <span className="text-md text-center font-['Montserrat',_sans-serif]">
-                  Zufriedene Kunden
-                </span>
+                <span className="text-md text-center">Zufriedene Kunden</span>
               </div>
 
               {/* Team Mitglieder */}
               <div className="flex flex-col items-center relative">
-                <Title className="">
+                <Title>
                   <Counter value={targets.teamMembers} />
                 </Title>
                 <span className="text-md text-center font-['Montserrat',_sans-serif]">
