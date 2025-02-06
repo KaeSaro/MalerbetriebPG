@@ -22,7 +22,7 @@ export function Header() {
         <div className="relative w-full max-w-[1420px] h-full mx-auto">
           <div className="absolute inset-0 flex justify-center items-center overflow-hidden">
             <img
-              src="/Logo.JPG"
+              src="/Logo.jpg"
               alt="Banner"
               className="w-full h-[450px] object-cover object-center"
             />
