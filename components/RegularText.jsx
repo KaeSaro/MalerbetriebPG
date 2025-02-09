@@ -1,6 +1,16 @@
-export function RegularText({ children, withQuotes, withDot }) {
+export function RegularText({
+  children,
+  withQuotes,
+  withDot,
+  textColor = "text-black",
+  isBold = false,
+}) {
   return (
-    <p className="text-[16px] sm:text-[16px] md:text-[20px] lg:text-[24px] leading-tight font-montserrat text-left">
+    <p
+      className={`${textColor} ${
+        isBold ? "font-bold" : "font-normal"
+      } text-base sm:text-base md:text-xl lg:text-2xl leading-tight font-montserrat text-left`}
+    >
       {withQuotes ? <>&quot;</> : null}
 
       {children}
@@ -9,8 +19,8 @@ export function RegularText({ children, withQuotes, withDot }) {
         <span
           className={
             withQuotes
-              ? `text-[#D0312D] -ml-1 sm:-ml-1 md:-ml-1 lg:-ml-2 -mr-1 sm:-mr-1 md:-mr-2 lg:-mr-3`
-              : `text-[#D0312D] -ml-1 sm:-ml-1 md:-ml-1 lg:-ml-1.5`
+              ? `text-red-600 -ml-1 sm:-ml-1 md:-ml-1 lg:-ml-2 -mr-1 sm:-mr-1 md:-mr-2 lg:-mr-3`
+              : `text-red-600 -ml-1 sm:-ml-1 md:-ml-1 lg:-ml-1.5`
           }
         >
           .

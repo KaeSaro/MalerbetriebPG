@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { Title } from "../components/Title";
 
 export function Footer() {
   return (
-    <footer className="bg-[#03020e] w-full relative">
+    <footer className="bg-[#000000] w-full relative">
       {/* Wave SVG at the top */}
       {/* <div className="absolute top-[132px] left-0 w-full transform -translate-y-full">
         <svg
@@ -29,10 +30,9 @@ export function Footer() {
           {/* Left column with logo */}
           <div className="text-white w-full md:w-1/2">
             <div className="flex flex-col items-start">
-              <h1 className="text-[25px] font-fira uppercase">
+              <Title withoutDot withStroke>
                 Malerbetrieb Pascal Gerdes
-                <span className="text-[#D0312D]">.</span>
-              </h1>
+              </Title>
               <p className="text-[#ffffff] text-[16px] font-montserrat">
                 Wir schaffen solide Farbe
               </p>
@@ -90,7 +90,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className=" w-full bg-[#03020e]  relative pb-12 p-8 pt-0 ">
+      <div className=" w-full bg-[#000000]  relative pb-12 p-8 pt-0 ">
         {/* Footer Bottom with contact information */}
         <div className="-ml-8 -mr-8 border-t-2 border-[#343434] mb-8 mt-2"></div>
 

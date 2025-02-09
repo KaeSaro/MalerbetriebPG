@@ -34,65 +34,54 @@ const Home = () => {
         <div className="flex flex-col items-start">
           {/* Firmenvorstellung Section */}
           <div className="flex flex-col flex-col-reverse md:flex-row gap-8 ">
+            <div className="flex-1 space-y-6">
+              <Title withoutDot withStroke>
+                Malerbetrieb Pascal Gerdes
+              </Title>
+              <RegularText textColor="text-[#889cab]" isBold>
+                Ich bin Pascal Gerdes, Ihr Experte, wenn es um hochwertige
+                Malerarbeiten, Innenausbau und individuelle Gestaltungslösungen
+                geht.
+              </RegularText>
+              <RegularText withDot>
+                Mit Leidenschaft für Farbem, Oberflächen und handwerkliche
+                Präzision setze ich seit vielen Jahren kreative und langlebige
+                Gestaltungskonzepte um. Von Spachtel- und Verputzarbeiten über
+                Bodenbeläge bis hin zu Spezialtechniken wie Sandstrahlarbeiten
+                und Industriebeschichtungen - mein team und ich stehen für
+                maßgeschneiderte Lösungen, die nicht nur optisch überzeugen,
+                sondern auch langfristig Bestand haben.
+              </RegularText>
+              <RegularText>
+                Ob Neubau, Renovierungen oder individuelle Raumgestaltung -{" "}
+                <span className="text-[#889cab]">
+                  ich begleite Sie von der ersten Idee bis zur perfekten
+                  Umsetzung.
+                </span>
+                ich begleite Sie von der ersten Idee bis zur perfekten
+                Umsetzung. Lassen Sie uns gemeinsam Ihre Räume in echte
+                Wohlfülorte verwandeln!
+              </RegularText>
+            </div>
             {/* Geschäftsführer Bild */}
             <div className="basis-[100vw] md:basis-auto md:h-auto flex-1 relative">
               <Image
-                src="/pasi.jpg"
+                src="/logo.jpg"
                 alt="Geschäftsführer Pascal Gerdes"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover "
                 priority
               />
             </div>
 
             {/* Firmenvorstellung Text */}
-            <div className="flex-1 space-y-6">
-              <Title withDot>Malerbetrieb Pascal Gerdes</Title>
-              <RegularText>
-                Willkommen bei Ihrem Experten für hochwertige Malerarbeiten. Wir
-                verbinden traditionelles Handwerk mit modernen Techniken für
-                perfekte Ergebnisse.
-              </RegularText>
-              <RegularText withDot>
-                Von der individuellen Farbberatung bis zur professionellen
-                Ausführung - wir verwandeln Ihre Räume in Wohlfühloasen.
-              </RegularText>
-              <RegularText>
-                Mit Präzision, Kreativität und jahrelanger Erfahrung setzen wir
-                Ihre Wünsche um - innen wie außen.
-              </RegularText>
-            </div>
           </div>
 
           {/* Statistik Section */}
           <div className="w-full mt-24  relative">
             {/* SVG Cross overlay */}
-            <div className="absolute inset-0 pointer-events-none">
-              <svg
-                className="w-full h-full"
-                viewBox="0 0 400 300"
-                preserveAspectRatio="none"
-              >
-                <line
-                  x1="0"
-                  y1="150"
-                  x2="400"
-                  y2="150"
-                  stroke="gray"
-                  strokeWidth="2"
-                />
-                <line
-                  x1="200"
-                  y1="0"
-                  x2="200"
-                  y2="300"
-                  stroke="gray"
-                  strokeWidth="0.75"
-                />
-              </svg>
-            </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-4 gap-6">
               {/* Jahre im Geschäft */}
               <div className="flex flex-col items-center relative">
                 <Title className="text-6xl">
