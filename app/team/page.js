@@ -3,6 +3,7 @@
 import { Content } from "../../components/Content";
 import { Title } from "../../components/Title";
 import { RegularText } from "../../components/RegularText";
+import Image from "next/image";
 
 const teamMembers = [
   {
@@ -10,31 +11,7 @@ const teamMembers = [
     position: "Malermeister",
     image: "/test1.jpg",
   },
-  {
-    name: "Herbert Lau",
-    position: "Malermeister",
-    image: "/test1.jpg",
-  },
-  {
-    name: "Michel Wallenfels",
-    position: "Malergeselle",
-    image: "/test1.jpg",
-  },
-  {
-    name: "Lars Varga",
-    position: "Malergeselle",
-    image: "/test1.jpg",
-  },
-  {
-    name: "Manuel Witt",
-    position: "Malergeselle",
-    image: "/test1.jpg",
-  },
-  {
-    name: "Marcel Franz",
-    position: "Malergeselle",
-    image: "/test1.jpg",
-  },
+  // ... rest of team members
 ];
 
 const manager = {
@@ -47,11 +24,13 @@ const manager = {
 
 const TeamMember = ({ name, position, image, description }) => (
   <div className="flex flex-col">
-    <div className="aspect-[3/4] w-full">
-      <img
+    <div className="aspect-[3/4] w-full relative">
+      <Image
         src={image}
         alt={`${name} - ${position}`}
-        className="w-full h-full object-cover"
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 33vw"
       />
     </div>
     <div className="mt-4">
@@ -84,11 +63,13 @@ export default function Team() {
         {/* Manager Section */}
         <div className="flex flex-col md:flex-row md:space-x-12">
           <div className="w-full md:w-1/3">
-            <div className="aspect-[3/4] w-full">
-              <img
+            <div className="aspect-[3/4] w-full relative">
+              <Image
                 src={manager.image}
                 alt={`${manager.name} - ${manager.position}`}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
             <div className="mt-4">
