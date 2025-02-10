@@ -66,7 +66,7 @@ const Home = () => {
             {/* Geschäftsführer Bild */}
             <div className="basis-[100vw] md:basis-auto md:h-auto flex-1 relative">
               <Image
-                src="/logo.jpg"
+                src="/Logo.jpg"
                 alt="Geschäftsführer Pascal Gerdes"
                 fill
                 className="object-cover "
