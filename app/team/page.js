@@ -11,7 +11,31 @@ const teamMembers = [
     position: "Malermeister",
     image: "/test1.jpg",
   },
-  // ... rest of team members
+  {
+    name: "Herbert Lau",
+    position: "Malermeister",
+    image: "/test1.jpg",
+  },
+  {
+    name: "Michel Wallenfels",
+    position: "Malergeselle",
+    image: "/test1.jpg",
+  },
+  {
+    name: "Lars Varga",
+    position: "Malergeselle",
+    image: "/test1.jpg",
+  },
+  {
+    name: "Manuel Witt",
+    position: "Malergeselle",
+    image: "/test1.jpg",
+  },
+  {
+    name: "Marcel Franz",
+    position: "Malergeselle",
+    image: "/test1.jpg",
+  },
 ];
 
 const manager = {
