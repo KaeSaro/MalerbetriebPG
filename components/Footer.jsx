@@ -3,7 +3,7 @@ import { Title } from "../components/Title";
 
 export function Footer() {
   return (
-    <footer className="bg-[#000000] w-full relative">
+    <footer className="bg-[#889cab] w-full relative">
       {/* Wave SVG at the top */}
       {/* <div className="absolute top-[132px] left-0 w-full transform -translate-y-full">
         <svg
@@ -30,11 +30,16 @@ export function Footer() {
           {/* Left column with logo */}
           <div className="text-white w-full md:w-1/2">
             <div className="flex flex-col items-start">
-              <Title withoutDot withStroke>
+              <Title
+                withoutDot
+                withStroke
+                strokeColor="#000000"
+                fontSize="text-[40px] sm:text-[44px] md:text-[48px] lg:text-[52px]"
+              >
                 Malerbetrieb Pascal Gerdes
               </Title>
-              <p className="text-[#ffffff] text-[16px] font-montserrat">
-                Wir schaffen solide Farbe
+              <p className="text-[#ffffff] text-[20px] font-montserrat">
+                Farben. Flächen. Perfektion. Alles aus einer Hand.
               </p>
             </div>
           </div>
@@ -47,19 +52,19 @@ export function Footer() {
             <div className="flex w-full justify-between md:basis-auto space-x-8">
               <Link
                 href="/"
-                className="text-[#e2e2e2] text-[18px] hover:text-white "
+                className="text-[#000000] text-[18px] hover:text-white"
               >
                 Home
               </Link>
               <Link
                 href="/leistungen"
-                className="text-white text-[18px] hover:text-gray-300"
+                className="text-[#000000] text-[18px] hover:text-white"
               >
                 Leistungen
               </Link>
               <Link
                 href="/projekte"
-                className="text-white text-[18px] hover:text-gray-300"
+                className="text-[#000000] text-[18px] hover:text-white"
               >
                 Projekte
               </Link>
@@ -70,19 +75,19 @@ export function Footer() {
             <div className="flex w-full justify-between md:basis-auto space-x-8">
               <Link
                 href="/kontakt"
-                className="text-white text-[18px] hover:text-gray-300"
+                className="text-[#000000] text-[18px] hover:text-white"
               >
                 Kontakt
               </Link>
               <Link
                 href="/team"
-                className="text-white text-[18px] hover:text-gray-300"
+                className="text-[#000000] text-[18px] hover:text-white"
               >
                 Team
               </Link>
               <Link
                 href="/impressum"
-                className="text-white text-[18px] hover:text-gray-300"
+                className="text-[#000000] text-[18px] hover:text-white"
               >
                 Impressum
               </Link>
@@ -90,14 +95,14 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className=" w-full bg-[#000000]  relative pb-12 p-8 pt-0 ">
+      <div className=" w-full bg-[#889cab]  relative pb-12 p-8 pt-0 ">
         {/* Footer Bottom with contact information */}
         <div className="-ml-8 -mr-8 border-t-2 border-[#343434] mb-8 mt-2"></div>
 
         <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
           {/* Copyright Text */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <p className="text-[12px] leading-tight font-montserrat text-[#c4c4c4] whitespace-nowrap">
+            <p className="text-[14px] leading-tight font-montserrat text-[#000000] whitespace-nowrap">
               <span className="block custom:inline whitespace-nowrap">
                 © {new Date().getFullYear()} Malerbetrieb Pascal Gerdes
               </span>
@@ -111,22 +116,22 @@ export function Footer() {
           <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-0">
             <div className="flex whitespace-nowrap">
               <Link
-                href="tel:+4915170220139"
-                className="text-[12px] leading-tight font-montserrat text-[#c4c4c4] hover:text-white transition-colors duration-300"
+                href="tel:+4917632345137"
+                className="text-[14px] leading-tight font-montserrat text-[#000000] hover:text-white transition-colors duration-300"
               >
-                +49 (0) 151 7022 0139
+                +49 (0) 176 3234 5137
               </Link>
             </div>
             <div className="flex whitespace-nowrap justify-center">
               <Link
-                href="mailto:info@c-bau.com"
-                className="text-[12px] leading-tight font-montserrat text-[#c4c4c4] hover:text-white transition-colors duration-300"
+                href="mailto:info@malerbetrieb-gerdes.de"
+                className="text-[14px] leading-tight font-montserrat text-[#000000] hover:text-white transition-colors duration-300"
               >
-                info@c-bau.com
+                info@malerbetrieb-gerdes.de
               </Link>
             </div>
           </div>
-          <p className="text-[12px] leading-tight font-montserrat text-[#c4c4c4] inline-block">
+          <p className="text-[14px] leading-tight font-montserrat text-[#000000] inline-block">
             <span className="block custom:inline whitespace-nowrap">
               Faule Birke 1
             </span>
@@ -138,7 +143,7 @@ export function Footer() {
           <div className="flex w-full md:w-auto text-center md:text-right justify-center items-start">
             <Link
               href="/agb"
-              className="text-[12px] leading-tight font-montserrat text-[#c4c4c4] hover:text-white transition-colors duration-300"
+              className="text-[14px] leading-tight font-montserrat text-[#000000] hover:text-white transition-colors duration-300"
             >
               AGB
             </Link>
@@ -147,7 +152,7 @@ export function Footer() {
           <div className="flex w-full md:w-auto text-center md:text-right justify-center items-start">
             <Link
               href="/datenschutz"
-              className="text-[12px] leading-tight font-montserrat text-[#c4c4c4] hover:text-white transition-colors duration-300"
+              className="text-[14px] leading-tight font-montserrat text-[#000000] hover:text-white transition-colors duration-300"
             >
               Datenschutz
             </Link>

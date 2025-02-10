@@ -15,12 +15,32 @@ const menuItems = [
 export function Header({ bgColor = "bg-black" }) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   return (
     <header className={`relative w-full ${bgColor}`}>
-      <div className="relative w-full h-[90px] bg-black">
+      <div className="relative w-full h-[90px] bg-[#ded5d0]">
+        {/* Logo Container with conditional Link */}
+        <div className="absolute top-0 right-8 h-[90px] w-[90px] flex items-center justify-end z-10">
+          {isHomePage ? (
+            <img
+              src="/PGlogo2.svg"
+              alt="PG Logo"
+              className="w-full h-[60px] object-contain cursor-default"
+            />
+          ) : (
+            <Link href="/" className="w-full h-[60px]">
+              <img
+                src="/PGlogo2.svg"
+                alt="PG Logo"
+                className="w-full h-full object-contain cursor-pointer"
+              />
+            </Link>
+          )}
+        </div>
+
         <div className="relative w-full max-w-[1200px] h-full mx-auto">
-          <div className="relative h-full px-8 sm:px-12 lg:px-16 flex items-center justify-between">
+          <div className="relative h-full px-8 sm:px-12 lg:px-16 flex items-center">
             {/* Mobile Menu Button */}
             <div className="md:hidden z-50">
               <button
@@ -34,12 +54,12 @@ export function Header({ bgColor = "bg-black" }) {
                   }`}
                 >
                   <span
-                    className={`absolute left-0 w-full h-[2px] bg-[#ded5d0] transform transition-all duration-300 ease-in-out origin-center
-                      ${isOpen ? "top-3 rotate-45" : "top-2"}`}
+                    className={`absolute left-0 w-full h-[2px] bg-[#000000] transform transition-all duration-300 ease-in-out origin-center
+                      ${isOpen ? "top-3 rotate-45 bg-[#ffffff] " : "top-2"}`}
                   />
                   <span
-                    className={`absolute left-0 w-full h-[2px] bg-[#ded5d0] transform transition-all duration-300 ease-in-out origin-center
-                      ${isOpen ? "top-3 -rotate-45" : "top-5"}`}
+                    className={`absolute left-0 w-full h-[2px] bg-[#000000] transform transition-all duration-300 ease-in-out origin-center
+                      ${isOpen ? "top-3 -rotate-45 bg-[#ffffff] " : "top-5"}`}
                   />
                 </div>
               </button>
@@ -51,25 +71,16 @@ export function Header({ bgColor = "bg-black" }) {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative text-lg font-medium font-fira text-[#ded5d0] transition-colors ${
+                  className={`relative text-lg font-medium font-fira text-[#000000] transition-colors ${
                     pathname === item.href
-                      ? "after:absolute after:bottom-0.5 after:left-0 after:w-full after:h-[2px] after:bg-[#889cab]"
-                      : "hover:text-[#889cab]"
+                      ? "after:absolute after:bottom-0.5 after:left-0 after:w-full after:h-[2px] after:bg-[#000000]"
+                      : "hover:text-[#ffffff]"
                   }`}
                 >
                   {item.name}
                 </Link>
               ))}
             </nav>
-
-            {/* Logo Container */}
-            <div className="h-[60px] w-[90px] overflow-hidden mr-[-16px] sm:mr-[-20px] lg:mr-[-24px]">
-              <img
-                src="/PGlogo.svg"
-                alt="PG Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
           </div>
 
           {/* Mobile Menu Overlay */}

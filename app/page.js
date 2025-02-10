@@ -55,10 +55,10 @@ const Home = () => {
               <RegularText>
                 Ob Neubau, Renovierungen oder individuelle Raumgestaltung -{" "}
                 <span className="text-[#889cab]">
-                  ich begleite Sie von der ersten Idee bis zur perfekten
+                  Ich begleite Sie von der ersten Idee bis zur perfekten
                   Umsetzung.
                 </span>
-                ich begleite Sie von der ersten Idee bis zur perfekten
+                &nbsp;Ich begleite Sie von der ersten Idee bis zur perfekten
                 Umsetzung. Lassen Sie uns gemeinsam Ihre Räume in echte
                 Wohlfülorte verwandeln!
               </RegularText>
