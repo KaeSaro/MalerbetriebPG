@@ -81,7 +81,7 @@ export default function Team() {
               &quot; The strength of the team is each individual member.
             </RegularText>
             <RegularText textColor="text-[#889cab] " isBold>
-              The strengtth of each member is the team &quot;
+              The strength of each member is the team &quot;
             </RegularText>
           </div>
         </div>
