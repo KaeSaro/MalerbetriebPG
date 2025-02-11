@@ -78,7 +78,7 @@ const Home = () => {
           <div className="w-full mt-24 relative">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {/* Jahre im Geschäft */}
-              <div className="flex flex-col items-center relative">
+              <div className="flex flex-col items-center relative order-1 md:order-1">
                 <Title className="text-6xl">
                   <Counter
                     value={
@@ -89,31 +89,31 @@ const Home = () => {
                 <span className="text-md text-center">Jahre Erfahrung</span>
               </div>
 
-              {/* Projekte */}
-              <div className="flex flex-col items-center relative">
+              {/* Team Mitglieder */}
+              <div className="flex flex-col items-center relative order-2 md:order-4">
                 <Title>
-                  <Counter value={targets.projectsCompleted} />
+                  <Counter value={targets.teamMembers} />
                 </Title>
-                <span className="text-md text-center">
-                  Projekte Abgeschlossen
+                <span className="text-md text-center font-['Montserrat',_sans-serif]">
+                  Team Mitglieder
                 </span>
               </div>
 
               {/* Zufriedene Kunden */}
-              <div className="flex flex-col items-center relative">
+              <div className="flex flex-col items-center relative order-3 md:order-3">
                 <Title>
                   <Counter value={targets.satisfiedCustomers} />
                 </Title>
                 <span className="text-md text-center">Zufriedene Kunden</span>
               </div>
 
-              {/* Team Mitglieder */}
-              <div className="flex flex-col items-center relative">
+              {/* Projekte */}
+              <div className="flex flex-col items-center relative order-4 md:order-2">
                 <Title>
-                  <Counter value={targets.teamMembers} />
+                  <Counter value={targets.projectsCompleted} />
                 </Title>
-                <span className="text-md text-center font-['Montserrat',_sans-serif]">
-                  Team Mitglieder
+                <span className="text-md text-center">
+                  Projekte Abgeschlossen
                 </span>
               </div>
             </div>
