@@ -33,7 +33,7 @@ export function Footer() {
               <Title
                 withoutDot
                 withStroke
-                strokeColor="#000000"
+                strokeColor="#ded5d0"
                 fontSize="text-[40px] sm:text-[44px] md:text-[48px] lg:text-[52px]"
               >
                 Malerbetrieb Pascal Gerdes

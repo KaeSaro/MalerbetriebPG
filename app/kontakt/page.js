@@ -120,7 +120,7 @@ export default function Kontakt() {
           <RegularText textColor="text-[#889cab]" isBold>
             Wir sind für Sie da
           </RegularText>
-          <RegularText textColor="text-[#000000]">
+          <RegularText>
             Kontaktieren Sie uns für Ihre individuellen Wünsche und Projekte
           </RegularText>
         </div>
@@ -130,31 +130,32 @@ export default function Kontakt() {
           {/* Left Column - Contact Information */}
           <div className="w-full md:w-1/2 flex flex-col space-y-8">
             <div className="space-y-4">
-              <h2 className="text-xl font-fira font-medium text-[#000000]">
+              <Title fontSize="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
                 Ihre Anfrage
-              </h2>
-              <p className="text-base font-montserrat text-black">
+              </Title>
+              <RegularText>
                 Gerne beraten wir Sie zu Ihrem Projekt. Nutzen Sie unser
                 Kontaktformular oder kontaktieren Sie uns direkt.
-              </p>
-              <p className="text-base font-montserrat text-black">
+              </RegularText>
+              <RegularText>
                 Wir melden uns zeitnah bei Ihnen zurück und besprechen Ihre
                 individuellen Wünsche.
-              </p>
+              </RegularText>
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-xl font-fira font-medium text-[#000000]">
+              <Title fontSize="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
                 Geschäftszeiten
-              </h2>
+              </Title>
+
               <div className="space-y-2 font-montserrat">
                 <p className="flex justify-between">
-                  <span>Montag - Donnerstag:</span>
-                  <span>8:00 - 17:00 Uhr</span>
+                  <RegularText>Montag - Donnerstag:</RegularText>
+                  <RegularText>8:00 - 17:00 Uhr</RegularText>
                 </p>
                 <p className="flex justify-between">
-                  <span>Freitag:</span>
-                  <span>8:00 - 12:00 Uhr</span>
+                  <RegularText>Freitag:</RegularText>
+                  <RegularText>8:00 - 12:00 Uhr</RegularText>
                 </p>
               </div>
             </div>

@@ -58,10 +58,12 @@ const TeamMember = ({ name, position, image, description }) => (
       />
     </div>
     <div className="mt-4">
-      <h3 className="text-xl font-montserrat font-medium text-[#889cab]">
+      <h3 className="text-lg sm:text-xl md:text-xl lg:text-3xl font-montserrat font-medium text-[#889cab]">
         {name}
       </h3>
-      <p className="text-lg font-fira text-black">{position}</p>
+      <p className="text-md sm:text-lg md:text-xl lg:text-2xl font-fira text-black">
+        {position}
+      </p>
       <p className="mt-2 text-base font-fira text-black">{description}</p>
     </div>
   </div>
@@ -97,14 +99,16 @@ export default function Team() {
               />
             </div>
             <div className="mt-4">
-              <h3 className="text-xl font-montserrat font-medium text-[#889cab]">
+              <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-4xl font-montserrat font-medium text-[#889cab]">
                 {manager.name}
               </h3>
-              <p className="text-lg font-fira text-black">{manager.position}</p>
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-fira text-black">
+                {manager.position}
+              </p>
             </div>
           </div>
           <div className="mt-4 md:mt-0 md:w-2/3">
-            <p className="text-lg font-montserrat text-black leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-montserrat text-black leading-relaxed">
               {manager.description}
             </p>
           </div>

@@ -9,7 +9,7 @@ export function RegularText({
     <p
       className={`${textColor} ${
         isBold ? "font-bold" : "font-normal"
-      } text-base sm:text-base md:text-xl lg:text-2xl leading-tight font-montserrat text-left`}
+      } text-md sm:text-lg md:text-xl lg:text-2xl leading-tight font-montserrat text-left`}
     >
       {withQuotes ? <>&quot;</> : null}
 

@@ -54,7 +54,7 @@ const Home = () => {
               </RegularText>
               <RegularText>
                 Ob Neubau, Renovierungen oder individuelle Raumgestaltung -{" "}
-                <span className="text-[#889cab]">
+                <span className="text-[#889cab] font-bold ">
                   Ich begleite Sie von der ersten Idee bis zur perfekten
                   Umsetzung.
                 </span>
@@ -75,18 +75,20 @@ const Home = () => {
           </div>
 
           {/* Statistik Section */}
-          <div className="w-full mt-24 relative">
+          <div className="w-full  mt-24 relative">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {/* Jahre im Geschäft */}
               <div className="flex flex-col items-center relative order-1 md:order-1">
-                <Title className="text-6xl">
+                <Title>
                   <Counter
                     value={
                       new Date().getFullYear() - getCreationDate().getFullYear()
                     }
                   />
                 </Title>
-                <span className="text-md text-center">Jahre Erfahrung</span>
+                <span className="text-[20px] font-bold text-center">
+                  Jahre Erfahrung
+                </span>
               </div>
 
               {/* Team Mitglieder */}
@@ -94,7 +96,7 @@ const Home = () => {
                 <Title>
                   <Counter value={targets.teamMembers} />
                 </Title>
-                <span className="text-md text-center font-['Montserrat',_sans-serif]">
+                <span className="text-[20px] font-bold text-center font-['Montserrat',_sans-serif]">
                   Team Mitglieder
                 </span>
               </div>
@@ -104,7 +106,9 @@ const Home = () => {
                 <Title>
                   <Counter value={targets.satisfiedCustomers} />
                 </Title>
-                <span className="text-md text-center">Zufriedene Kunden</span>
+                <span className="text-[20px] font-bold text-center">
+                  Zufriedene Kunden
+                </span>
               </div>
 
               {/* Projekte */}
@@ -112,7 +116,7 @@ const Home = () => {
                 <Title>
                   <Counter value={targets.projectsCompleted} />
                 </Title>
-                <span className="text-md text-center">
+                <span className="text-[20px] font-bold text-center">
                   Projekte Abgeschlossen
                 </span>
               </div>

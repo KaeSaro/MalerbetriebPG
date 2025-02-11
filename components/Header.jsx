@@ -66,12 +66,12 @@ export function Header({ bgColor = "bg-black" }) {
             </div>
 
             {/* Desktop Menu */}
-            <nav className="hidden md:flex space-x-12 pl-0">
+            <nav className="hidden md:flex space-x-8 pl-0">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative text-lg font-medium font-fira text-[#000000] transition-colors ${
+                  className={`relative text-[24px] font-medium font-fira text-[#000000] transition-colors ${
                     pathname === item.href
                       ? "after:absolute after:bottom-0.5 after:left-0 after:w-full after:h-[2px] after:bg-[#000000]"
                       : "hover:text-[#ffffff]"
