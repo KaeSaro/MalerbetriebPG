@@ -133,11 +133,11 @@ export function Footer() {
           </div>
           <p className="text-[14px] leading-tight font-montserrat text-[#000000] inline-block">
             <span className="block custom:inline whitespace-nowrap">
-              Faule Birke 1
+              Untere Pfarrstr. 2
             </span>
             <span className="hidden custom:inline">, </span>
             <span className="block custom:inline whitespace-nowrap">
-              57080 Siegen
+              35708 Haiger
             </span>
           </p>
           <div className="flex w-full md:w-auto text-center md:text-right justify-center items-start">

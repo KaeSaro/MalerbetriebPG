@@ -91,7 +91,7 @@ function ContactForm() {
       </button>
 
       <Link
-        href="tel:+4915170220139"
+        href="tel:+4917632345137"
         className="bg-[#ded5d0] text-[#000000] p-4 transition-all duration-200 hover:bg-[#000000] hover:text-[#ded5d0] text-center font-montserrat border border-[#000000]"
       >
         Anrufen
@@ -115,12 +115,12 @@ export default function Kontakt() {
     <Content>
       <div className="flex flex-col space-y-16">
         {/* Header Section */}
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col space-y-6 mb-12">
           <Title withStroke>Ihr direkter Draht zu uns</Title>
           <RegularText textColor="text-[#889cab]" isBold>
             Wir sind für Sie da
           </RegularText>
-          <RegularText textColor="text-[#000000] text-center">
+          <RegularText textColor="text-[#000000]">
             Kontaktieren Sie uns für Ihre individuellen Wünsche und Projekte
           </RegularText>
         </div>

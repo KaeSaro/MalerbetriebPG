@@ -39,7 +39,7 @@ export function Header({ bgColor = "bg-black" }) {
           )}
         </div>
 
-        <div className="relative w-full max-w-[1200px] h-full mx-auto">
+        <div className="relative w-full max-w-[1400px] h-full mx-auto">
           <div className="relative h-full px-8 sm:px-12 lg:px-16 flex items-center">
             {/* Mobile Menu Button */}
             <div className="md:hidden z-50">
