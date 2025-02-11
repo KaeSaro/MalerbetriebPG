@@ -112,6 +112,9 @@ export function Header({ bgColor = "bg-black" }) {
           </div>
         </div>
       </div>
+      <div className="w-full bg-[#000000]">
+        <div className="mx-auto w-full max-w-[1200px] h-[1px] bg-black" />
+      </div>
     </header>
   );
 }
