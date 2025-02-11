@@ -33,7 +33,7 @@ const Home = () => {
       <Content>
         <div className="flex flex-col items-start">
           {/* Firmenvorstellung Section */}
-          <div className="flex flex-col flex-col-reverse md:flex-row gap-8 ">
+          <div className="flex flex-col flex-col-reverse md:flex-row gap-8">
             <div className="flex-1 space-y-6">
               <Title withoutDot withStroke>
                 Malerbetrieb Pascal Gerdes
@@ -68,19 +68,15 @@ const Home = () => {
                 src="/Logo.jpg"
                 alt="Geschäftsführer Pascal Gerdes"
                 fill
-                className="object-cover "
+                className="object-cover"
                 priority
               />
             </div>
-
-            {/* Firmenvorstellung Text */}
           </div>
 
           {/* Statistik Section */}
-          <div className="w-full mt-24  relative">
-            {/* SVG Cross overlay */}
-
-            <div className="grid grid-cols-4 gap-6">
+          <div className="w-full mt-24 relative">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {/* Jahre im Geschäft */}
               <div className="flex flex-col items-center relative">
                 <Title className="text-6xl">
