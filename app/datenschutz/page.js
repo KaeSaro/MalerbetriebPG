@@ -28,9 +28,11 @@ export default function Datenschutz() {
             <RegularText>
               Malerbetrieb Pascal Gerdes
               <br />
-              [Ihre Adresse]
+              Untere Pfarrstr. 2
               <br />
-              [Ihre E-Mail]
+              35708 Haiger
+              <br />
+              info@malerbetrieb-gerdes.de
             </RegularText>
           </div>
 
