@@ -20,9 +20,9 @@ export default function AGB() {
             <RegularText>
               Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge
               zwischen dem Malerbetrieb Pascal Gerdes (nachfolgend
-              "Auftragnehmer") und seinen Kunden (nachfolgend "Auftraggeber")
-              über Malerarbeiten, Innenausbau sowie damit zusammenhängende
-              Dienstleistungen.
+              &quot;Auftragnehmer&quot;) und seinen Kunden (nachfolgend
+              &quot;Auftraggeber&quot;) über Malerarbeiten, Innenausbau sowie
+              damit zusammenhängende Dienstleistungen.
             </RegularText>
           </div>
 
