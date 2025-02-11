@@ -44,11 +44,11 @@ const Home = () => {
                 geht.
               </RegularText>
               <RegularText withDot>
-                Mit Leidenschaft für Farbem, Oberflächen und handwerkliche
+                Mit Leidenschaft für Farben, Oberflächen und handwerkliche
                 Präzision setze ich seit vielen Jahren kreative und langlebige
                 Gestaltungskonzepte um. Von Spachtel- und Verputzarbeiten über
                 Bodenbeläge bis hin zu Spezialtechniken wie Sandstrahlarbeiten
-                und Industriebeschichtungen - mein team und ich stehen für
+                und Industriebeschichtungen - mein Team und ich stehen für
                 maßgeschneiderte Lösungen, die nicht nur optisch überzeugen,
                 sondern auch langfristig Bestand haben.
               </RegularText>
@@ -58,9 +58,8 @@ const Home = () => {
                   Ich begleite Sie von der ersten Idee bis zur perfekten
                   Umsetzung.
                 </span>
-                &nbsp;Ich begleite Sie von der ersten Idee bis zur perfekten
-                Umsetzung. Lassen Sie uns gemeinsam Ihre Räume in echte
-                Wohlfülorte verwandeln!
+                &nbsp; Lassen Sie uns gemeinsam Ihre Räume in echte Wohlfülorte
+                verwandeln!
               </RegularText>
             </div>
             {/* Geschäftsführer Bild */}
