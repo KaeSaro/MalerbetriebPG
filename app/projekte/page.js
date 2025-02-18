@@ -4,7 +4,6 @@ import { Content } from "../../components/Content";
 import { Title } from "../../components/Title";
 import { RegularText } from "../../components/RegularText";
 import { useState } from "react";
-import Link from "next/link";
 
 // Beispielbilder für jedes Projekt
 const projectImages = {
