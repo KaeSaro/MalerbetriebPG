@@ -114,7 +114,7 @@ export function Footer() {
           </div>
           {/* Contact Info Container */}
           <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-0">
-            <div className="flex whitespace-nowrap">
+            <div className="flex justify-center whitespace-nowrap">
               <Link
                 href="tel:+4917632345137"
                 className="text-[14px] leading-tight font-montserrat text-[#000000] hover:text-white transition-colors duration-300"
@@ -136,7 +136,7 @@ export function Footer() {
               Untere Pfarrstr. 2
             </span>
             <span className="hidden custom:inline">, </span>
-            <span className="block custom:inline whitespace-nowrap">
+            <span className="block custom:inline whitespace-nowrap ">
               35708 Haiger
             </span>
           </p>

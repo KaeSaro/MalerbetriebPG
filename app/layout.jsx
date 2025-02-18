@@ -37,7 +37,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          rel="icon"
+          href="/faviconmb.svg"
+          sizes="any"
+          type="image/svg+xml"
+        ></link>
       </head>
       <body
         className={`${fira.variable} ${montserrat.variable} antialiased font-montserrat`}

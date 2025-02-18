@@ -31,7 +31,10 @@ const Home = () => {
   return (
     <>
       <Content>
-        <div className="flex flex-col items-start">
+        <div
+          className="flex flex-col items-start
+        "
+        >
           {/* Firmenvorstellung Section */}
           <div className="flex flex-col flex-col-reverse md:flex-row gap-8">
             <div className="flex-1 space-y-6">
@@ -63,7 +66,7 @@ const Home = () => {
               </RegularText>
             </div>
             {/* Geschäftsführer Bild */}
-            <div className="basis-[100vw] md:basis-auto md:h-auto flex-1 relative">
+            <div className=" md:w-96 h-64 relative rounded-lg shadow-lg overflow-hidden my-auto mt-2">
               <Image
                 src="/Logo.jpg"
                 alt="Geschäftsführer Pascal Gerdes"
