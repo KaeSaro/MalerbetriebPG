@@ -17,6 +17,7 @@ const projectImages = {
     "/projekte/siegen/villa/1.jpg",
     "/projekte/siegen/villa/2.jpg",
     "/projekte/siegen/villa/3.jpg",
+    "/projekte/siegen/villa/4.jpg",
   ],
   "neubau-mehrfamilienhaus": [
     "/projekte/kreuztal/1.jpg",
@@ -27,6 +28,11 @@ const projectImages = {
     "/projekte/olpe/1.jpg",
     "/projekte/olpe/2.jpg",
     "/projekte/olpe/3.jpg",
+  ],
+  frankfurttest: [
+    "/projekte/frankfurt/hauptbahnhof/1.jpg",
+    "/projekte/frankfurt/hauptbahnhof/2.jpg",
+    "/projekte/frankfurt/hauptbahnhof/3.jpg",
   ],
 };
 
@@ -74,6 +80,19 @@ const projectLocations = [
         description: "Bodenbeschichtung und Wandgestaltung",
         type: "Bilder",
         href: "/projekte/industriehalle",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Frankfurt",
+    description: "Projekte im Raum Krankfurt",
+    projects: [
+      {
+        title: "Hauptbahnhof",
+        description: "Wandanstrich",
+        type: "Bilder",
+        href: "/projekte/frankfurttest",
       },
     ],
   },
