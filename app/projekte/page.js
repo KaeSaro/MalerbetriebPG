@@ -6,6 +6,30 @@ import { RegularText } from "../../components/RegularText";
 import { useState } from "react";
 import Link from "next/link";
 
+// Beispielbilder für jedes Projekt
+const projectImages = {
+  "modernisierung-geschaeftshaus": [
+    "/projekte/siegen/haus/1.jpg",
+    "/projekte/siegen/haus/2.jpg",
+    "/projekte/siegen/haus/3.jpg",
+  ],
+  "villa-renovierung": [
+    "/projekte/siegen/villa/1.jpg",
+    "/projekte/siegen/villa/2.jpg",
+    "/projekte/siegen/villa/3.jpg",
+  ],
+  "neubau-mehrfamilienhaus": [
+    "/projekte/kreuztal/1.jpg",
+    "/projekte/kreuztal/2.jpg",
+    "/projekte/kreuztal/3.jpg",
+  ],
+  industriehalle: [
+    "/projekte/olpe/1.jpg",
+    "/projekte/olpe/2.jpg",
+    "/projekte/olpe/3.jpg",
+  ],
+};
+
 const projectLocations = [
   {
     id: 1,
@@ -55,26 +79,145 @@ const projectLocations = [
   },
 ];
 
-const ProjectCard = ({ title, description, type, href }) => (
-  <div className="bg-[#e8e0dc] p-6 rounded-lg shadow-md border border-[#ded5d0]">
-    <div className="flex justify-between items-start mb-4">
-      <h3 className="text-xl font-fira text-[#889cab]">{title}</h3>
-      <Link href={href}>
-        <span className="text-md font-montserrat bg-[#889cab] text-white px-3 py-1 rounded-full hover:bg-[#000000] hover:text-white transition-all duration-300 cursor-pointer">
-          {type}
-        </span>
-      </Link>
+// Image Gallery Modal Component
+const ImageGallery = ({ images, isOpen, onClose }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  if (!isOpen) return null;
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-6xl mx-4 p-4 bg-[#e8e0dc] rounded-lg"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute -top-4 -right-4 w-8 h-8 bg-[#889cab] text-white rounded-full flex items-center justify-center hover:bg-black transition-colors duration-300 z-10"
+        >
+          ×
+        </button>
+
+        {/* Gallery Container */}
+        <div className="relative h-[70vh] flex items-center">
+          {/* Navigation Arrows */}
+          <button
+            onClick={handlePrevImage}
+            className="absolute left-4 z-10 w-12 h-12 bg-[#889cab] text-white rounded-full flex items-center justify-center hover:bg-black transition-colors duration-300"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 19L8 12L15 5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+
+          <button
+            onClick={handleNextImage}
+            className="absolute right-4 z-10 w-12 h-12 bg-[#889cab] text-white rounded-full flex items-center justify-center hover:bg-black transition-colors duration-300"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5L16 12L9 19"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+
+          {/* Image Container */}
+          <div className="w-full h-full relative overflow-hidden">
+            <div
+              className="absolute inset-0 flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+            >
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="w-full h-full flex-shrink-0 flex items-center justify-center p-4"
+                >
+                  <img
+                    src={image}
+                    alt={`Projekt Bild ${index + 1}`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Image Counter */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#889cab] text-white px-4 py-2 rounded-full font-montserrat">
+          {currentImageIndex + 1} / {images.length}
+        </div>
+      </div>
     </div>
-    <p className="font-montserrat text-base">{description}</p>
-  </div>
-);
+  );
+};
+
+const ProjectCard = ({ title, description, type, href }) => {
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const projectId = href.split("/").pop();
+  const images = projectImages[projectId] || [];
+
+  return (
+    <div className="bg-[#e8e0dc] p-6 rounded-lg shadow-md border border-[#ded5d0] transition-all duration-300 hover:shadow-lg">
+      <div className="flex justify-between items-start mb-4">
+        <h3 className="text-xl font-fira text-[#889cab]">{title}</h3>
+        <button
+          onClick={() => setIsGalleryOpen(true)}
+          className="text-md font-montserrat bg-[#889cab] text-white px-3 py-1 rounded-full hover:bg-[#000000] hover:text-white transition-all duration-300 cursor-pointer"
+        >
+          {type}
+        </button>
+      </div>
+      <p className="font-montserrat text-base">{description}</p>
+      <ImageGallery
+        images={images}
+        isOpen={isGalleryOpen}
+        onClose={() => setIsGalleryOpen(false)}
+      />
+    </div>
+  );
+};
 
 const LocationSection = ({ location, isOpen, onToggle }) => {
   return (
     <div className="w-full">
       <button
         onClick={onToggle}
-        className={`w-full text-left p-6 bg-[#e8e0dc] rounded-lg shadow-md border border-[#ded5d0] transition-all duration-300 ${
+        className={`w-full text-left p-6 bg-[#e8e0dc] rounded-lg shadow-md border border-[#ded5d0] transition-all duration-300 hover:shadow-lg ${
           isOpen ? "mb-8" : "mb-4"
         }`}
       >
