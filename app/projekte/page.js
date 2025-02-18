@@ -98,7 +98,7 @@ const projectLocations = [
 ];
 
 // Image Gallery Modal Component
-const ImageGallery = ({ images, isOpen, onClose }) => {
+const ImageGallery = ({ images, isOpen, onClose, location, title }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -108,18 +108,13 @@ const ImageGallery = ({ images, isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const handlePrevImage = () => {
-    setLeftButtonActive(true);
-    setTimeout(() => setLeftButtonActive(false), 1000);
     setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const handleNextImage = () => {
-    setRightButtonActive(true);
-    setTimeout(() => setRightButtonActive(false), 1000);
     setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  // Swipe Funktionalität
   const minSwipeDistance = 50;
 
   const onTouchStart = (e) => {
@@ -155,6 +150,14 @@ const ImageGallery = ({ images, isOpen, onClose }) => {
         className="relative w-full max-w-6xl mx-4 p-4 bg-[#e8e0dc] rounded-lg"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* Titel-Bereich - responsiver Abstand */}
+        <div className="absolute top-12 md:top-12 left-4 right-4 z-20 text-center">
+          <h2 className="text-2xl font-fira text-[#889cab] truncate">
+            {location}
+          </h2>
+          <p className="font-montserrat text-base mt-0.5 truncate">{title}</p>
+        </div>
+
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -163,8 +166,8 @@ const ImageGallery = ({ images, isOpen, onClose }) => {
           ×
         </button>
 
-        {/* Gallery Container */}
-        <div className="relative h-[70vh] flex items-center">
+        {/* Gallery Container - nach unten verschoben für Titel */}
+        <div className="relative h-[70vh] flex items-center mt-10 md:mt-24">
           {/* Navigation Arrows */}
           <button
             onClick={handlePrevImage}
@@ -176,8 +179,16 @@ const ImageGallery = ({ images, isOpen, onClose }) => {
               -ml-4
               md:left-0 md:-ml-1
               md:w-10 md:h-10
-              ${leftButtonActive ? "bg-black" : "bg-[#889cab] hover:bg-black"}
+              ${leftButtonActive ? "bg-black" : "bg-[#889cab]"}
+              hover:bg-black
+              focus:outline-none
             `}
+            onMouseDown={() => setLeftButtonActive(true)}
+            onMouseUp={() => setTimeout(() => setLeftButtonActive(false), 1000)}
+            onTouchStart={() => setLeftButtonActive(true)}
+            onTouchEnd={() =>
+              setTimeout(() => setLeftButtonActive(false), 1000)
+            }
           >
             <svg
               width="16"
@@ -207,8 +218,18 @@ const ImageGallery = ({ images, isOpen, onClose }) => {
               -mr-4
               md:right-0 md:-mr-1
               md:w-10 md:h-10
-              ${rightButtonActive ? "bg-black" : "bg-[#889cab] hover:bg-black"}
+              ${rightButtonActive ? "bg-black" : "bg-[#889cab]"}
+              hover:bg-black
+              focus:outline-none
             `}
+            onMouseDown={() => setRightButtonActive(true)}
+            onMouseUp={() =>
+              setTimeout(() => setRightButtonActive(false), 1000)
+            }
+            onTouchStart={() => setRightButtonActive(true)}
+            onTouchEnd={() =>
+              setTimeout(() => setRightButtonActive(false), 1000)
+            }
           >
             <svg
               width="16"
@@ -264,7 +285,7 @@ const ImageGallery = ({ images, isOpen, onClose }) => {
   );
 };
 
-const ProjectCard = ({ title, description, type, href }) => {
+const ProjectCard = ({ title, description, type, href, location }) => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const projectId = href.split("/").pop();
   const images = projectImages[projectId] || [];
@@ -285,6 +306,8 @@ const ProjectCard = ({ title, description, type, href }) => {
         images={images}
         isOpen={isGalleryOpen}
         onClose={() => setIsGalleryOpen(false)}
+        location={location}
+        title={title}
       />
     </div>
   );
@@ -338,7 +361,7 @@ const LocationSection = ({ location, isOpen, onToggle }) => {
         }`}
       >
         {location.projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <ProjectCard key={index} {...project} location={location.name} />
         ))}
       </div>
     </div>
