@@ -100,15 +100,50 @@ const projectLocations = [
 // Image Gallery Modal Component
 const ImageGallery = ({ images, isOpen, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const [leftButtonActive, setLeftButtonActive] = useState(false);
+  const [rightButtonActive, setRightButtonActive] = useState(false);
 
   if (!isOpen) return null;
 
   const handlePrevImage = () => {
+    setLeftButtonActive(true);
+    setTimeout(() => setLeftButtonActive(false), 1000);
     setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const handleNextImage = () => {
+    setRightButtonActive(true);
+    setTimeout(() => setRightButtonActive(false), 1000);
     setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  // Swipe Funktionalität
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      handleNextImage();
+    }
+    if (isRightSwipe) {
+      handlePrevImage();
+    }
   };
 
   return (
@@ -133,14 +168,24 @@ const ImageGallery = ({ images, isOpen, onClose }) => {
           {/* Navigation Arrows */}
           <button
             onClick={handlePrevImage}
-            className="absolute left-4 z-10 w-12 h-12 bg-[#889cab] text-white rounded-full flex items-center justify-center hover:bg-black transition-colors duration-300"
+            className={`
+              absolute left-0 top-1/2 -translate-y-1/2 z-10 
+              w-8 h-8 text-white rounded-full 
+              flex items-center justify-center
+              transition-colors duration-300
+              -ml-4
+              md:left-0 md:-ml-1
+              md:w-10 md:h-10
+              ${leftButtonActive ? "bg-black" : "bg-[#889cab] hover:bg-black"}
+            `}
           >
             <svg
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="md:w-6 md:h-6"
             >
               <path
                 d="M15 19L8 12L15 5"
@@ -154,14 +199,24 @@ const ImageGallery = ({ images, isOpen, onClose }) => {
 
           <button
             onClick={handleNextImage}
-            className="absolute right-4 z-10 w-12 h-12 bg-[#889cab] text-white rounded-full flex items-center justify-center hover:bg-black transition-colors duration-300"
+            className={`
+              absolute right-0 top-1/2 -translate-y-1/2 z-10
+              w-8 h-8 text-white rounded-full
+              flex items-center justify-center
+              transition-colors duration-300
+              -mr-4
+              md:right-0 md:-mr-1
+              md:w-10 md:h-10
+              ${rightButtonActive ? "bg-black" : "bg-[#889cab] hover:bg-black"}
+            `}
           >
             <svg
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="md:w-6 md:h-6"
             >
               <path
                 d="M9 5L16 12L9 19"
@@ -174,7 +229,12 @@ const ImageGallery = ({ images, isOpen, onClose }) => {
           </button>
 
           {/* Image Container */}
-          <div className="w-full h-full relative overflow-hidden">
+          <div
+            className="w-full h-full relative overflow-hidden"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
             <div
               className="absolute inset-0 flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
