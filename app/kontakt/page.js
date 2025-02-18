@@ -118,7 +118,8 @@ export default function Kontakt() {
         <div className="flex flex-col space-y-6 mb-12">
           <Title withStroke>Ihr direkter Draht zu uns</Title>
           <RegularText textColor="text-[#889cab]" isBold>
-            Wir sind für Sie da
+            Farbe bekennen, Qualität erleben - vereinbaren Sie jetzt Ihren
+            persönlichen Beratungstermin!
           </RegularText>
         </div>
 

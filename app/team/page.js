@@ -78,10 +78,13 @@ export default function Team() {
           <Title withStroke>Unser Team</Title>
           <div className="flex flex-col space-y-2">
             <RegularText textColor="text-[#889cab] " isBold>
-              &quot; The strength of the team is each individual member.
+              &quot; Die Stärke des Teams ist jedes einzelne Mitglied.
             </RegularText>
-            <RegularText textColor="text-[#889cab] " isBold>
-              The strength of each member is the team &quot;
+            <RegularText
+              textColor="text-[#889cab] ml-[11px] sm:ml-[12px] md:ml-[14px] lg:ml-[17px] "
+              isBold
+            >
+              Die Stärke jedes Mitglieds ist das Team &quot;
             </RegularText>
           </div>
         </div>
