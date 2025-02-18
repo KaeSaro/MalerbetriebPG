@@ -84,7 +84,7 @@ export default function Team() {
             >
               <div className="flex ">
                 <span className="w-[12px] sm:w-[12px] md:w-[13px] lg:w-[12px] xl:w-[13px] 2xl:w-[px] flex-shrink-0 text-right">
-                  "
+                  &quot;
                 </span>
                 <span className="flex-1">
                   Die Stärke des Teams ist jedes einzelne Mitglied.
@@ -96,7 +96,7 @@ export default function Team() {
               isBold
             >
               <span>Die Stärke jedes Mitglieds ist das Team</span>
-              <span>"</span>
+              <span>&quot;</span>
             </RegularText>
           </div>
         </div>
