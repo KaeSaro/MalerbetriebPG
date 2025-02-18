@@ -76,15 +76,27 @@ export default function Team() {
         {/* Header Section */}
         <div className="flex flex-col space-y-6">
           <Title withStroke>Unser Team</Title>
-          <div className="flex flex-col space-y-2">
-            <RegularText textColor="text-[#889cab] " isBold>
-              &quot; Die Stärke des Teams ist jedes einzelne Mitglied.
+          <div className="flex flex-col w-full -ml-[12px]">
+            <RegularText
+              textColor="text-[#889cab]"
+              isBold
+              className="relative w-full"
+            >
+              <div className="flex ">
+                <span className="w-[12px] sm:w-[12px] md:w-[13px] lg:w-[12px] xl:w-[13px] 2xl:w-[px] flex-shrink-0 text-right">
+                  "
+                </span>
+                <span className="flex-1">
+                  Die Stärke des Teams ist jedes einzelne Mitglied.
+                </span>
+              </div>
             </RegularText>
             <RegularText
-              textColor="text-[#889cab] ml-[11px] sm:ml-[12px] md:ml-[14px] lg:ml-[17px] "
+              textColor="text-[#889cab] ml-[12px] sm:ml-[12px] md:ml-[12px] lg:ml-[11px] xl:ml-[12px]"
               isBold
             >
-              Die Stärke jedes Mitglieds ist das Team &quot;
+              <span>Die Stärke jedes Mitglieds ist das Team</span>
+              <span>"</span>
             </RegularText>
           </div>
         </div>
