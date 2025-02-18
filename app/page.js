@@ -4,6 +4,7 @@ import { RegularText } from "../components/RegularText";
 import Image from "next/image";
 import { Title } from "../components/Title";
 import { Counter } from "@/components/Counter";
+import Link from "next/link";
 
 const targets = {
   businessCreationDate: {
@@ -58,11 +59,18 @@ const Home = () => {
               </RegularText>
               <RegularText>
                 Unsere Stärke liegt nicht nur in klassischen Malerarbeiten,
-                sondern in der Vielfalt unserer Leistungen: Von innovativen
-                Spachteltechniken über hochwertige Bodenbeschichtungen bis hin
-                zu spezialisierten Sandstrahlarbeiten. Mit modernster Technik
-                und traditionellem Handwerksgeist schaffen wir Oberflächen, die
-                begeistern und überdauern.
+                sondern in der Vielfalt unserer{" "}
+                <Link
+                  href="/leistungen"
+                  className="inline-block rounded-lg ml-[-4px] px-1 py-0 transition-all duration-300 ease-in-out cursor-pointer hover:bg-[#889cab] hover:text-white [&>p]:!text-[16px] md:[&>p]:!text-[20px] lg:[&>p]:!text-[24px]"
+                >
+                  Leistungen
+                </Link>
+                : Von innovativen Spachteltechniken über hochwertige
+                Bodenbeschichtungen bis hin zu spezialisierten
+                Sandstrahlarbeiten. Mit modernster Technik und traditionellem
+                Handwerksgeist schaffen wir Oberflächen, die begeistern und
+                überdauern.
               </RegularText>
               <RegularText textColor="text-[#889cab]" isBold>
                 Entdecken Sie den Unterschied, den echte Handwerkskunst macht -
