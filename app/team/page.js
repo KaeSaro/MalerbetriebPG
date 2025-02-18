@@ -43,7 +43,7 @@ const manager = {
   position: "Inhaber",
   image: "/test1.jpg",
   description:
-    "Mit über 20 Jahren Erfahrung im Malerhandwerk leitet Max Mustermann unser Unternehmen. Seine Expertise in modernen Maltechniken und sein Engagement für Qualität prägen unseren Betrieb. Unter seiner Führung entwickeln wir uns stetig weiter und setzen neue Maßstäbe in der Branche.",
+    "Seit 2017 führe ich mit Leidenschaft und Fachkompetenz meinen Malerbetrieb, in dem Teamarbeit und eine familiäre Atmosphäre an erster Stelle stehen. Gemeinsam mit meinem engagierten Team biete ich hochwertige Malerarbeiten, kreative Gestaltungskonzepte und professionelle Lösungen rund um Farbe und Oberflächen. Mit einem hohen Qualitätsanspruch, modernen Techniken und individueller Beratung sorge ich dafür, dass jedes Projekt – von klassischen Anstrichen bis hin zu innovativen Wandgestaltungen – zuverlässig und ganz nach den Wünschen meiner Kunden umgesetzt wird.",
 };
 
 const TeamMember = ({ name, position, image, description }) => (

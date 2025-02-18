@@ -120,9 +120,6 @@ export default function Kontakt() {
           <RegularText textColor="text-[#889cab]" isBold>
             Wir sind für Sie da
           </RegularText>
-          <RegularText>
-            Kontaktieren Sie uns für Ihre individuellen Wünsche und Projekte
-          </RegularText>
         </div>
 
         {/* Contact Content */}

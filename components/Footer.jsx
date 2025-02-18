@@ -133,7 +133,7 @@ export function Footer() {
           </div>
           <p className="text-[14px] leading-tight font-montserrat text-[#000000] inline-block">
             <span className="block custom:inline whitespace-nowrap">
-              Untere Pfarrstr. 2
+              Hüttenstr. 50
             </span>
             <span className="hidden custom:inline">, </span>
             <span className="block custom:inline whitespace-nowrap ">

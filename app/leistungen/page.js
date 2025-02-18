@@ -50,6 +50,11 @@ const services = [
     description:
       "Wir installieren OWA-Decken, die für ihre Akustik- und Brandschutzeigenschaften bekannt sind und in vielen gewerblichen sowie öffentlichen Gebäuden eingesetzt werden.",
   },
+  {
+    title: "Graffitientfernung & Graffitischutz",
+    description:
+      "Graffitientfernung bezeichnet das schonende und fachgerechte Entfernen unerwünschter Graffitis von verschiedenen Oberflächen, während Graffitischutz durch spezielle Schutzbeschichtungen dafür sorgt, dass neue Graffitis leichter entfernt werden können und die behandelten Flächen langfristig geschützt bleiben.",
+  },
 ];
 
 const ServiceCard = ({ title, description }) => (
