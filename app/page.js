@@ -42,27 +42,31 @@ const Home = () => {
                 Malerbetrieb Pascal Gerdes
               </Title>
               <RegularText textColor="text-[#889cab]" isBold>
-                Ich bin Pascal Gerdes, Ihr Experte, wenn es um hochwertige
-                Malerarbeiten, Innenausbau und individuelle Gestaltungslösungen
-                geht.
+                Willkommen bei Malerbetrieb Pascal Gerdes - Wo Handwerk und
+                Vision sich vereinen
               </RegularText>
               <RegularText withDot>
-                Mit Leidenschaft für Farben, Oberflächen und handwerkliche
-                Präzision setze ich seit vielen Jahren kreative und langlebige
-                Gestaltungskonzepte um. Von Spachtel- und Verputzarbeiten über
-                Bodenbeläge bis hin zu Spezialtechniken wie Sandstrahlarbeiten
-                und Industriebeschichtungen - mein Team und ich stehen für
-                maßgeschneiderte Lösungen, die nicht nur optisch überzeugen,
-                sondern auch langfristig Bestand haben.
+                In einer Welt voller Farben und Möglichkeiten schaffen wir seit
+                2017 mehr als nur gestrichene Wände - wir erschaffen
+                Lebensräume, die Geschichten erzählen. Als Malerbetrieb mit Herz
+                und Handwerkskunst verwandeln wir Ihre Visionen in greifbare
+                Realität. Ob Sie von einer modernen Industriehalle träumen, Ihr
+                Zuhause in einen persönlichen Wohlfühlort verwandeln möchten
+                oder Ihr Geschäft einen professionellen Look benötigt - wir
+                bringen die Expertise, Kreativität und Präzision mit, die Ihr
+                Projekt verdient.
               </RegularText>
               <RegularText>
-                Ob Neubau, Renovierungen oder individuelle Raumgestaltung -{" "}
-                <span className="text-[#889cab] font-bold ">
-                  Ich begleite Sie von der ersten Idee bis zur perfekten
-                  Umsetzung.
-                </span>
-                &nbsp; Lassen Sie uns gemeinsam Ihre Räume in echte Wohlfülorte
-                verwandeln!
+                Unsere Stärke liegt nicht nur in klassischen Malerarbeiten,
+                sondern in der Vielfalt unserer Leistungen: Von innovativen
+                Spachteltechniken über hochwertige Bodenbeschichtungen bis hin
+                zu spezialisierten Sandstrahlarbeiten. Mit modernster Technik
+                und traditionellem Handwerksgeist schaffen wir Oberflächen, die
+                begeistern und überdauern.
+              </RegularText>
+              <RegularText textColor="text-[#889cab]" isBold>
+                Entdecken Sie den Unterschied, den echte Handwerkskunst macht -
+                Ihr Pascal Gerdes und Team
               </RegularText>
             </div>
             {/* Geschäftsführer Bild */}
