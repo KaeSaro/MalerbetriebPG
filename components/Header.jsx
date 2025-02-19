@@ -101,7 +101,7 @@ export function Header({ bgColor = "bg-black" }) {
             </div>
 
             {/* Desktop Menu */}
-            <nav className="hidden md:flex space-x-8 pl-0">
+            <nav className="hidden md:flex space-x-12 pl-0">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
