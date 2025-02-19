@@ -21,7 +21,8 @@ export default function Impressum() {
             <RegularText>
               Malerbetrieb Pascal Gerdes
               <br />
-              Untere Pfarrstr. 2<br />
+              Hüttenstr. 50
+              <br />
               35708 Haiger
             </RegularText>
           </div>
