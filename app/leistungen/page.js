@@ -75,9 +75,7 @@ export default function Leistungen() {
         <div className="flex flex-col space-y-6">
           <Title withStroke>Kompetenz & Qualität</Title>
           <RegularText textColor="text-[#889cab]" isBold>
-            Von klassischen Malerarbeiten bis hin zu speziellen Beschichtungen -
-            wir bieten Ihnen das komplette Spektrum modernster
-            Oberflächengestaltung.
+            Von klassischen Malerarbeiten bis hin zu speziellen Beschichtungen.
           </RegularText>
         </div>
 
