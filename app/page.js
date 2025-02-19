@@ -39,12 +39,21 @@ const Home = () => {
           {/* Firmenvorstellung Section */}
           <div className="flex flex-col flex-col-reverse md:flex-row gap-8">
             <div className="flex-1 space-y-6">
+              {/* Geschäftsführer Bild */}
+              <div className=" md:w-1000 h-96 relative shadow-lg overflow-hidden my-auto mb-24">
+                <Image
+                  src="/Logo.jpg"
+                  alt="Geschäftsführer Pascal Gerdes"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
               <Title withoutDot withStroke>
                 Malerbetrieb Pascal Gerdes
               </Title>
               <RegularText textColor="text-[#889cab]" isBold>
-                Willkommen bei Malerbetrieb Pascal Gerdes - Wo Handwerk und
-                Vision sich vereinen
+                Wo Handwerk und Vision sich vereinen.
               </RegularText>
               <RegularText withDot>
                 In einer Welt voller Farben und Möglichkeiten schaffen wir seit
@@ -76,16 +85,6 @@ const Home = () => {
                 Entdecken Sie den Unterschied, den echte Handwerkskunst macht -
                 Ihr Pascal Gerdes und Team
               </RegularText>
-            </div>
-            {/* Geschäftsführer Bild */}
-            <div className=" md:w-96 h-64 relative rounded-lg shadow-lg overflow-hidden my-auto mt-2">
-              <Image
-                src="/Logo.jpg"
-                alt="Geschäftsführer Pascal Gerdes"
-                fill
-                className="object-cover"
-                priority
-              />
             </div>
           </div>
 

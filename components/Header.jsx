@@ -56,7 +56,7 @@ export function Header({ bgColor = "bg-black" }) {
     <header className={`relative w-full ${bgColor}`}>
       <div className="relative w-full h-[90px] bg-[#ded5d0]">
         {/* Logo Container with conditional Link */}
-        <div className="absolute top-0 right-8 h-[90px] w-[90px] flex items-center justify-end z-10">
+        <div className="absolute top-0 right-1 sm:right-6 md:right-6 lg:right-10 xl:right-10  h-[90px] w-[90px] flex items-center justify-end z-10">
           {isHomePage ? (
             <img
               src="/PGlogo2.svg"
