@@ -75,12 +75,9 @@ export default function Leistungen() {
         <div className="flex flex-col space-y-6">
           <Title withStroke>Kompetenz & Qualität</Title>
           <RegularText textColor="text-[#889cab]" isBold>
-            Professionelle Malerarbeiten und mehr für Ihre Räume
-          </RegularText>
-          <RegularText withDot>
             Von klassischen Malerarbeiten bis hin zu speziellen Beschichtungen -
             wir bieten Ihnen das komplette Spektrum modernster
-            Oberflächengestaltung
+            Oberflächengestaltung.
           </RegularText>
         </div>
 

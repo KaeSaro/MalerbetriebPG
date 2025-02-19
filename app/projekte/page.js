@@ -381,11 +381,8 @@ export default function Projekte() {
         <div className="flex flex-col space-y-6">
           <Title withStroke>Einblicke in unsere Arbeit</Title>
           <RegularText textColor="text-[#889cab]" isBold>
-            Referenzen aus der Region
-          </RegularText>
-          <RegularText withDot>
-            Entdecken Sie unsere abgeschlossenen Projekte in verschiedenen
-            Städten und lassen Sie sich von unserer Arbeit inspirieren
+            Jedes Projekt erzählt seine eigene Geschichte von Handwerkskunst und
+            Präzision.
           </RegularText>
         </div>
 
