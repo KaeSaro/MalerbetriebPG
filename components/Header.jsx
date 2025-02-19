@@ -39,9 +39,8 @@ export function Header({ bgColor = "bg-black" }) {
     if (!touchStart) return;
 
     const currentTouch = e.touches[0].clientY;
-    const diff = touchStart - currentTouch; // Positive when swiping up
+    const diff = touchStart - currentTouch;
 
-    // If swipe up more than 50px, close menu
     if (diff > 50) {
       setIsOpen(false);
       setTouchStart(null);
@@ -53,10 +52,10 @@ export function Header({ bgColor = "bg-black" }) {
   };
 
   return (
-    <header className={`relative w-full ${bgColor}`}>
-      <div className="relative w-full h-[90px] bg-[#ded5d0]">
+    <header className="w-full fixed top-0 z-[1000] shadow-md">
+      <div className="relative w-full h-[90px] bg-[#e8e0dc]">
         {/* Logo Container with conditional Link */}
-        <div className="absolute top-0 right-1 sm:right-6 md:right-6 lg:right-10 xl:right-10  h-[90px] w-[90px] flex items-center justify-end z-10">
+        <div className="absolute top-0 right-1 sm:right-6 md:right-6 lg:right-10 xl:right-10 h-[90px] w-[90px] flex items-center justify-end z-10">
           {isHomePage ? (
             <img
               src="/PGlogo2.svg"
@@ -76,7 +75,7 @@ export function Header({ bgColor = "bg-black" }) {
 
         <div className="relative w-full max-w-[1400px] h-full mx-auto">
           <div className="relative h-full px-8 sm:px-12 lg:px-16 flex items-center">
-            {/* Mobile Menu Button - Now fixed position when menu is open */}
+            {/* Mobile Menu Button */}
             <div className={`md:hidden ${isOpen ? "fixed" : "relative"} z-50`}>
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -118,7 +117,7 @@ export function Header({ bgColor = "bg-black" }) {
             </nav>
           </div>
 
-          {/* Mobile Menu Overlay with touch handlers */}
+          {/* Mobile Menu Overlay */}
           <div
             className={`fixed top-0 left-0 right-0 h-screen bg-black md:hidden transition-all duration-300 ease-in-out z-40 overflow-hidden
               ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
@@ -149,9 +148,6 @@ export function Header({ bgColor = "bg-black" }) {
             </div>
           </div>
         </div>
-      </div>
-      <div className="w-full bg-[#000000]">
-        <div className="mx-auto w-full max-w-[1200px] h-[1px] bg-black" />
       </div>
     </header>
   );

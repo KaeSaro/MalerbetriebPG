@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
         ></link>
       </head>
       <body
-        className={`${fira.variable} ${montserrat.variable} antialiased font-montserrat`}
+        className={`${fira.variable} ${montserrat.variable} relative antialiased font-montserrat`}
         style={{
           fontFamily: "Montserrat, Helvetica Neue, Helvetica, sans-serif",
         }}

@@ -113,7 +113,7 @@ function ContactForm() {
 export default function Kontakt() {
   return (
     <Content>
-      <div className="flex flex-col space-y-24">
+      <div className="flex flex-col space-y-[86px]">
         {/* Header Section */}
         <div className="flex flex-col space-y-6 mb-12">
           <Title withStroke>Ihr direkter Draht zu uns</Title>
