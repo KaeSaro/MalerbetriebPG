@@ -31,7 +31,7 @@ export default function Impressum() {
             <Title withStroke>Kontakt</Title>
           </div>
           <div className="space-y-2">
-            <RegularText>Telefon: +49 (0) 151 7022 0139</RegularText>
+            <RegularText>Telefon: +49 (0) 176 3234 5137</RegularText>
             <RegularText>E-Mail: info@malerbetrieb-gerdes.de</RegularText>
           </div>
 
