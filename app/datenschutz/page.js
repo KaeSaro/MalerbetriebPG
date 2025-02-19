@@ -58,11 +58,17 @@ export default function Datenschutz() {
           </div>
 
           <div className="space-y-8">
-            <Title withStroke>Analysewerkzeuge</Title>
+            <Title withStroke>Google Fonts</Title>
             <RegularText>
-              Wir nutzen Analysewerkzeuge auf unserer Website, um die Nutzung
-              unserer Website zu analysieren und kontinuierlich zu verbessern.
-              Die dabei gewonnenen Daten werden anonymisiert verarbeitet.
+              Wir nutzen Google Fonts auf unserer Website. Dies ist ein Dienst
+              der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
+              Irland. Die Einbindung dieser Schriftarten erfolgt durch einen
+              Serveraufruf, in der Regel bei einem Server von Google in den USA.
+              Dabei werden Informationen wie Ihre IP-Adresse an Google
+              übermittelt. Die Nutzung von Google Fonts erfolgt im Interesse
+              einer einheitlichen und ansprechenden Darstellung unserer Website.
+              Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1
+              lit. f DSGVO dar.
             </RegularText>
           </div>
 
