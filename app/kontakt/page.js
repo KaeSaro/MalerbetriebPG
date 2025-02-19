@@ -52,7 +52,7 @@ function ContactForm() {
   };
 
   const inputStyles =
-    "p-4 bg-[#ded5d0] text-black font-montserrat border border-[#000000]";
+    "p-4 bg-[#ded5d0] text-black font-montserrat border border-[#000000] rounded-none focus:outline-none focus:ring-0";
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
@@ -85,14 +85,14 @@ function ContactForm() {
       />
       <button
         type="submit"
-        className="bg-[#ded5d0] text-[#000000] p-4 transition-all duration-200 hover:bg-[#000000] hover:text-[#ded5d0] font-montserrat border border-[#000000]"
+        className="bg-[#ded5d0] text-[#000000] p-4 transition-all duration-200 hover:bg-[#889cab] hover:text-[#ded5d0] font-montserrat border border-[#000000]"
       >
         Nachricht senden
       </button>
 
       <Link
         href="tel:+4917632345137"
-        className="bg-[#ded5d0] text-[#000000] p-4 transition-all duration-200 hover:bg-[#000000] hover:text-[#ded5d0] text-center font-montserrat border border-[#000000]"
+        className="bg-[#ded5d0] text-[#000000] p-4 transition-all duration-200 hover:bg-[#889cab] hover:text-[#ded5d0] text-center font-montserrat border border-[#000000]"
       >
         Anrufen
       </Link>
