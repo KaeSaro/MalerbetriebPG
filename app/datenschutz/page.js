@@ -28,7 +28,7 @@ export default function Datenschutz() {
             <RegularText>
               Malerbetrieb Pascal Gerdes
               <br />
-              Untere Pfarrstr. 2
+              Hüttenstr. 50
               <br />
               35708 Haiger
               <br />

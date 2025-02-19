@@ -47,7 +47,7 @@ export default function AGB() {
             </RegularText>
             <RegularText>
               Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Malerbetrieb
-              Pascal Gerdes, Untere Pfarrstr. 2, 35708 Haiger) mittels einer
+              Pascal Gerdes, Hüttenstr. 50, 35708 Haiger) mittels einer
               eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder
               E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen,
               informieren.
