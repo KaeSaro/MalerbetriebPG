@@ -40,7 +40,7 @@ const Home = () => {
           <div className="flex flex-col flex-col-reverse md:flex-row gap-8">
             <div className="flex-1 space-y-6">
               {/* Geschäftsführer Bild */}
-              <div className=" md:w-1000 h-96 relative shadow-lg overflow-hidden my-auto mb-24">
+              <div className=" md:w-1000 h-64 md:h-96 relative shadow-lg overflow-hidden my-auto mb-24">
                 <Image
                   src="/Logo.jpg"
                   alt="Geschäftsführer Pascal Gerdes"
