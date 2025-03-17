@@ -14,27 +14,27 @@ const teamMembers = [
   {
     name: "Herbert Lau",
     position: "Malermeister",
-    image: "/test1.jpg",
+    image: "/herbert.jpg",
   },
   {
     name: "Michel Wallenfels",
     position: "Malergeselle",
-    image: "/test1.jpg",
+    image: "/michel.jpg",
   },
   {
     name: "Lars Varga",
     position: "Malergeselle",
-    image: "/test1.jpg",
+    image: "/lars.jpg",
   },
   {
     name: "Manuel Witt",
     position: "Malergeselle",
-    image: "/test1.jpg",
+    image: "/manuel.jpg",
   },
   {
     name: "Marcel Franz",
     position: "Malergeselle",
-    image: "/test1.jpg",
+    image: "/marcel.jpg",
   },
 ];
 
