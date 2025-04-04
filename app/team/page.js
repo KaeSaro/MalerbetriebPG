@@ -9,7 +9,7 @@ const teamMembers = [
   {
     name: "Michael Demolt",
     position: "Malermeister",
-    image: "/test1.jpg",
+    image: "/michael.jpg",
   },
   {
     name: "Herbert Lau",
