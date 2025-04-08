@@ -5,100 +5,74 @@ import { Title } from "../../components/Title";
 import { RegularText } from "../../components/RegularText";
 import { useState } from "react";
 
-// Beispielbilder für jedes Projekt
-const projectImages = {
-  "modernisierung-geschaeftshaus": [
-    "/projekte/siegen/haus/1.jpg",
-    "/projekte/siegen/haus/2.jpg",
-    "/projekte/siegen/haus/3.jpg",
+// Beispielbilder für jede Kategorie
+const categoryImages = {
+  "maler-lackier-tapezier": [
+    "/projekte/maler-lackier-tapezier/1.jpg",
+    "/projekte/maler-lackier-tapezier/2.jpg",
+    "/projekte/maler-lackier-tapezier/3.jpg",
+    "/projekte/maler-lackier-tapezier/1.jpg",
   ],
-  "villa-renovierung": [
-    "/projekte/siegen/villa/1.jpg",
-    "/projekte/siegen/villa/2.jpg",
-    "/projekte/siegen/villa/3.jpg",
-    "/projekte/siegen/villa/4.jpg",
+  "spachtel-putz": [
+    "/projekte/spachtel-putz/2.jpg",
+    "/projekte/spachtel-putz/3.jpg",
   ],
-  "neubau-mehrfamilienhaus": [
-    "/projekte/kreuztal/1.jpg",
-    "/projekte/kreuztal/2.jpg",
-    "/projekte/kreuztal/3.jpg",
+  "bodenbelag-beschichtung": [
+    "/projekte/bodenbelag-beschichtung/1.jpg",
+    "/projekte/bodenbelag-beschichtung/2.jpg",
+    "/projekte/bodenbelag-beschichtung/3.jpg",
   ],
-  industriehalle: [
-    "/projekte/olpe/1.jpg",
-    "/projekte/olpe/2.jpg",
-    "/projekte/olpe/3.jpg",
+  "trockenbau-owa": [
+    "/projekte/trockenbau-owa/1.jpg",
+    "/projekte/trockenbau-owa/2.jpg",
+    "/projekte/trockenbau-owa/3.jpg",
   ],
-  frankfurttest: [
-    "/projekte/frankfurt/hauptbahnhof/1.jpg",
-    "/projekte/frankfurt/hauptbahnhof/2.jpg",
-    "/projekte/frankfurt/hauptbahnhof/3.jpg",
+  "parkplatz-hallenmarkierung": [
+    "/projekte/parkplatz-hallenmarkierung/1.jpg",
+    "/projekte/parkplatz-hallenmarkierung/3.jpg",
+  ],
+  "sandstrahl-graffitischutz": [
+    "/projekte/sandstrahl-graffitischutz/1.jpg",
+    "/projekte/sandstrahl-graffitischutz/2.jpg",
+    "/projekte/sandstrahl-graffitischutz/3.jpg",
   ],
 };
 
-const projectLocations = [
+const projectCategories = [
   {
-    id: 1,
-    name: "Siegen",
-    description: "Projekte im Herzen von Siegen",
-    projects: [
-      {
-        title: "Modernisierung Geschäftshaus",
-        description:
-          "Komplette Neugestaltung der Innenräume eines Geschäftshauses",
-        type: "Bilder",
-        href: "/projekte/modernisierung-geschaeftshaus",
-      },
-      {
-        title: "Villa Renovierung",
-        description: "Umfassende Renovierung einer historischen Villa",
-        type: "Bilder",
-        href: "/projekte/villa-renovierung",
-      },
-    ],
+    id: "maler-lackier-tapezier",
+    name: "Maler- und Lackierarbeiten / Tapezierarbeiten",
+    description: "Fachgerechte Maler-, Lackier- und Tapezierarbeiten für Innen- und Außenbereiche. Von klassischen Anstrichen bis hin zu dekorativen Tapeten.",
   },
   {
-    id: 2,
-    name: "Kreuztal",
-    description: "Projekte in Kreuztal und Umgebung",
-    projects: [
-      {
-        title: "Neubau Mehrfamilienhaus",
-        description: "Malerarbeiten für 12 Wohneinheiten",
-        type: "Bilder",
-        href: "/projekte/neubau-mehrfamilienhaus",
-      },
-    ],
+    id: "spachtel-putz",
+    name: "Spachtel- und Putzarbeiten",
+    description: "Perfekte Oberflächen durch fachgerechtes Spachteln und Verputzen - die ideale Grundlage für jede weitere Wandgestaltung.",
   },
   {
-    id: 3,
-    name: "Olpe",
-    description: "Projekte im Raum Olpe",
-    projects: [
-      {
-        title: "Industriehalle",
-        description: "Bodenbeschichtung und Wandgestaltung",
-        type: "Bilder",
-        href: "/projekte/industriehalle",
-      },
-    ],
+    id: "bodenbelag-beschichtung",
+    name: "Bodenbelag / Bodenbeschichtung",
+    description: "Professionelle Verlegung und Beschichtung von Böden für alle Anwendungsbereiche - robust, langlebig und pflegeleicht.",
   },
   {
-    id: 4,
-    name: "Frankfurt",
-    description: "Projekte im Raum Krankfurt",
-    projects: [
-      {
-        title: "Hauptbahnhof",
-        description: "Wandanstrich",
-        type: "Bilder",
-        href: "/projekte/frankfurttest",
-      },
-    ],
+    id: "trockenbau-owa",
+    name: "Trockenbau / OWA-Decken",
+    description: "Installation von hochwertigen Trockenbausystemen und OWA-Decken für optimale Raumakustik und modernes Design.",
+  },
+  {
+    id: "parkplatz-hallenmarkierung",
+    name: "Parkplatz- und Hallenmarkierungen",
+    description: "Präzise Markierungen für strukturierte Flächen in Parkhäusern, auf Parkplätzen und in Industriehallen.",
+  },
+  {
+    id: "sandstrahl-graffitischutz",
+    name: "Sandstrahlarbeiten / Graffitischutz",
+    description: "Effektive Oberflächenvorbereitung durch Sandstrahlen und langanhaltender Schutz vor Graffiti.",
   },
 ];
 
 // Image Gallery Modal Component
-const ImageGallery = ({ images, isOpen, onClose, location, title }) => {
+const ImageGallery = ({ images, isOpen, onClose, categoryName }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -143,7 +117,7 @@ const ImageGallery = ({ images, isOpen, onClose, location, title }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center"
+      className="fixed inset-0 bg-black bg-opacity-75 z-[9999] flex items-center justify-center"
       onClick={onClose}
     >
       <div
@@ -153,9 +127,8 @@ const ImageGallery = ({ images, isOpen, onClose, location, title }) => {
         {/* Titel-Bereich - responsiver Abstand */}
         <div className="absolute top-12 md:top-12 left-4 right-4 z-20 text-center">
           <h2 className="text-2xl font-fira text-[#889cab] truncate">
-            {location}
+            {categoryName}
           </h2>
-          <p className="font-montserrat text-base mt-0.5 truncate">{title}</p>
         </div>
 
         {/* Close Button */}
@@ -267,7 +240,7 @@ const ImageGallery = ({ images, isOpen, onClose, location, title }) => {
                 >
                   <img
                     src={image}
-                    alt={`Projekt Bild ${index + 1}`}
+                    alt={`Referenzbild ${index + 1}`}
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
@@ -285,96 +258,33 @@ const ImageGallery = ({ images, isOpen, onClose, location, title }) => {
   );
 };
 
-const ProjectCard = ({ title, description, type, href, location }) => {
+const CategoryCard = ({ category }) => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const projectId = href.split("/").pop();
-  const images = projectImages[projectId] || [];
+  const images = categoryImages[category.id] || [];
 
   return (
     <div className="bg-[#e8e0dc] p-6 rounded-lg shadow-md border border-[#ded5d0] transition-all duration-300 hover:shadow-lg">
       <div className="flex justify-between items-start mb-4">
-        <h3 className="text-xl font-fira text-[#889cab]">{title}</h3>
+        <h3 className="text-xl font-fira text-[#889cab]">{category.name}</h3>
         <button
           onClick={() => setIsGalleryOpen(true)}
           className="text-md font-montserrat bg-[#889cab] text-white px-3 py-1 rounded-full hover:bg-[#000000] hover:text-white transition-all duration-300 cursor-pointer"
         >
-          {type}
+          Bilder
         </button>
       </div>
-      <p className="font-montserrat text-base">{description}</p>
+      <p className="font-montserrat text-base">{category.description}</p>
       <ImageGallery
         images={images}
         isOpen={isGalleryOpen}
         onClose={() => setIsGalleryOpen(false)}
-        location={location}
-        title={title}
+        categoryName={category.name}
       />
     </div>
   );
 };
 
-const LocationSection = ({ location, isOpen, onToggle }) => {
-  return (
-    <div className="w-full">
-      <button
-        onClick={onToggle}
-        className={`w-full text-left p-6 bg-[#e8e0dc] rounded-lg shadow-md border border-[#ded5d0] transition-all duration-300 hover:shadow-lg ${
-          isOpen ? "mb-8" : "mb-4"
-        }`}
-      >
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-2xl font-fira text-[#889cab] mb-2">
-              {location.name}
-            </h2>
-            <p className="font-montserrat text-base">{location.description}</p>
-          </div>
-          <div
-            className={`transform transition-transform duration-300 ${
-              isOpen ? "rotate-180" : ""
-            }`}
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M19 9L12 16L5 9"
-                stroke="#889cab"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-      </button>
-
-      <div
-        className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-300 ${
-          isOpen
-            ? "opacity-100 max-h-[2000px]"
-            : "opacity-0 max-h-0 overflow-hidden"
-        }`}
-      >
-        {location.projects.map((project, index) => (
-          <ProjectCard key={index} {...project} location={location.name} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
 export default function Projekte() {
-  const [openLocationId, setOpenLocationId] = useState(null);
-
-  const handleToggle = (locationId) => {
-    setOpenLocationId(openLocationId === locationId ? null : locationId);
-  };
-
   return (
     <Content>
       <div className="flex flex-col space-y-16">
@@ -386,14 +296,9 @@ export default function Projekte() {
           </RegularText>
         </div>
 
-        <div className="flex flex-col space-y-4">
-          {projectLocations.map((location) => (
-            <LocationSection
-              key={location.id}
-              location={location}
-              isOpen={openLocationId === location.id}
-              onToggle={() => handleToggle(location.id)}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {projectCategories.map((category) => (
+            <CategoryCard key={category.id} category={category} />
           ))}
         </div>
       </div>
