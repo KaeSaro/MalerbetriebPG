@@ -7,11 +7,11 @@ export function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [status, setStatus] = useState(null);
 
-  // Add useEffect to clear status after 5 seconds
   useEffect(() => {
     if (status === "success" || status === "error") {
       const timer = setTimeout(() => {
@@ -39,71 +39,80 @@ export function ContactForm() {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
         setStatus("error");
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setStatus("error");
     }
   };
 
+  const inputStyles =
+    "p-4 bg-[#ded5d0] text-black font-montserrat border border-[#000000] rounded-none focus:outline-none focus:ring-0";
+
   return (
-    <div className="w-full md:w-1/2 p-8 rounded-lg">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          className="p-4 border border-[#1a1a1a] rounded-md bg-[#e5e5e5] text-black"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          className="p-4 border border-[#1a1a1a] rounded-md bg-[#e5e5e5] text-black"
-        />
-        <textarea
-          name="message"
-          placeholder="Nachricht"
-          value={formData.message}
-          onChange={handleChange}
-          rows="6"
-          required
-          className="p-4 border border-[#1a1a1a] rounded-md bg-[#e5e5e5] text-black"
-        />
-        <button
-          type="submit"
-          className="bg-[#e5e5e5] text-black p-4 rounded-full mt-4 border-2 border-black transition-all duration-200 hover:bg-black hover:text-white"
-        >
-          Senden
-        </button>
+    <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+        className={inputStyles}
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+        className={inputStyles}
+      />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Telefonnummer"
+        value={formData.phone}
+        onChange={handleChange}
+        required
+        className={inputStyles}
+      />
+      <textarea
+        name="message"
+        placeholder="Nachricht"
+        value={formData.message}
+        onChange={handleChange}
+        rows="6"
+        required
+        className={inputStyles}
+      />
+      <button
+        type="submit"
+        className="bg-[#ded5d0] text-[#000000] p-4 transition-all duration-200 hover:bg-[#889cab] hover:text-[#ded5d0] font-montserrat border border-[#000000]"
+      >
+        Nachricht senden
+      </button>
 
-        {/* Call Button */}
-        <Link
-          href="tel:+4917632345137"
-          className="bg-[#e5e5e5] text-black p-4 rounded-full border-2 border-black transition-all duration-200 hover:bg-black hover:text-white text-center"
-        >
-          Anrufen
-        </Link>
+      <Link
+        href="tel:+4917632345137"
+        className="bg-[#ded5d0] text-[#000000] p-4 transition-all duration-200 hover:bg-[#889cab] hover:text-[#ded5d0] text-center font-montserrat border border-[#000000]"
+      >
+        Anrufen
+      </Link>
 
-        {/* Status Messages - Moved below the link */}
-        <div className="text-center mt-2">
-          {status === "sending" && <p className="text-yellow-500">Senden...</p>}
-          {status === "success" && (
-            <p className="text-green-500">E-Mail erfolgreich gesendet!</p>
-          )}
-          {status === "error" && (
-            <p className="text-red-500">Fehler beim Senden!</p>
-          )}
-        </div>
-      </form>
-    </div>
+      <div className="text-center mt-2 font-montserrat">
+        {status === "sending" && <p className="text-[#000000]">Senden...</p>}
+        {status === "success" && (
+          <p className="text-green-600">E-Mail erfolgreich gesendet!</p>
+        )}
+        {status === "error" && (
+          <p className="text-red-600">Fehler beim Senden!</p>
+        )}
+      </div>
+    </form>
   );
 }
