@@ -41,7 +41,7 @@ const teamMembers = [
 const manager = {
   name: "Pascal Gerdes",
   position: "Inhaber",
-  image: "/test1.jpg",
+  image: "/pasi.jpg",
   description:
     "Seit 2017 führe ich mit Leidenschaft und Fachkompetenz meinen Malerbetrieb, in dem Teamarbeit und eine familiäre Atmosphäre an erster Stelle stehen. Gemeinsam mit meinem engagierten Team biete ich hochwertige Malerarbeiten, kreative Gestaltungskonzepte und professionelle Lösungen rund um Farbe und Oberflächen. Mit einem hohen Qualitätsanspruch, modernen Techniken und individueller Beratung sorge ich dafür, dass jedes Projekt – von klassischen Anstrichen bis hin zu innovativen Wandgestaltungen – zuverlässig und ganz nach den Wünschen meiner Kunden umgesetzt wird.",
 };
@@ -82,14 +82,14 @@ export default function Team() {
               isBold
               className="relative w-full"
             >
-              <div className="flex ">
+              <span className="flex">
                 <span className="w-[12px] sm:w-[12px] md:w-[13px] lg:w-[12px] xl:w-[13px] 2xl:w-[px] flex-shrink-0 text-right">
                   &quot;
                 </span>
                 <span className="flex-1">
                   Die Stärke des Teams ist jedes einzelne Mitglied.
                 </span>
-              </div>
+              </span>
             </RegularText>
             <RegularText
               textColor="text-[#889cab] ml-[12px] sm:ml-[12px] md:ml-[12px] lg:ml-[11px] xl:ml-[12px]"

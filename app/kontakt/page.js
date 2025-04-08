@@ -146,14 +146,14 @@ export default function Kontakt() {
               </Title>
 
               <div className="space-y-2 font-montserrat">
-                <p className="flex justify-between">
+                <div className="flex justify-between">
                   <RegularText>Montag - Donnerstag:</RegularText>
                   <RegularText>8:00 - 17:00 Uhr</RegularText>
-                </p>
-                <p className="flex justify-between">
+                </div>
+                <div className="flex justify-between">
                   <RegularText>Freitag:</RegularText>
                   <RegularText>8:00 - 12:00 Uhr</RegularText>
-                </p>
+                </div>
               </div>
             </div>
           </div>
