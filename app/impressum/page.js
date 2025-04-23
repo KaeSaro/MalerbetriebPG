@@ -56,8 +56,11 @@ export default function Impressum() {
 
           {/* Steuernummer */}
           <div className="space-y-4">
-            <Title withStroke>Steuernummer</Title>
-            <RegularText>Steuernummer: XXXXXXXXXXX</RegularText>
+            <Title withStroke>Umsatzsteuer-ID</Title>
+            <RegularText>
+                  Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+                </RegularText>
+                <RegularText>DE 314 350 931</RegularText>
           </div>
 
           {/* EU-Streitschlichtung */}

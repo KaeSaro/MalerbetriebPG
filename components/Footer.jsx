@@ -17,7 +17,7 @@ export function Footer() {
                 Malerbetrieb Pascal Gerdes
               </Title>
               <p className="text-[#ffffff] text-[20px] font-montserrat">
-                Farben. Flächen. Perfektion. Alles aus einer Hand.
+              Farbe. Struktur. Präzision.
               </p>
             </div>
           </div>

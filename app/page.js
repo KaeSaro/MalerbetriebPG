@@ -13,8 +13,8 @@ const targets = {
     day: 10,
   },
   projectsCompleted: 211,
-  satisfiedCustomers: 180,
-  teamMembers: 12,
+  satisfiedCustomers: 172,
+  teamMembers: 7,
 };
 
 function getCreationDate() {

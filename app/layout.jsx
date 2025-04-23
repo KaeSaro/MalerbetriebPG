@@ -48,11 +48,19 @@ export default function RootLayout({ children }) {
         className={`${fira.variable} ${montserrat.variable} relative antialiased font-montserrat`}
         style={{
           fontFamily: "Montserrat, Helvetica Neue, Helvetica, sans-serif",
+
         }}
       >
-        <Header />
-        {children}
-        <Footer />
+        <div style={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between'
+        }}>
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

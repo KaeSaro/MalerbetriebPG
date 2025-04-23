@@ -3,8 +3,11 @@
 import { Content } from "../../components/Content";
 import { Title } from "../../components/Title";
 import { RegularText } from "../../components/RegularText";
-import { useState } from "react";
+// import { useState } from "react";
 
+// Der ursprüngliche Code ist auskommentiert, um ihn später wiederherzustellen
+
+/*
 // Beispielbilder für jede Kategorie
 const categoryImages = {
   "maler-lackier-tapezier": [
@@ -124,14 +127,14 @@ const ImageGallery = ({ images, isOpen, onClose, categoryName }) => {
         className="relative w-full max-w-6xl mx-4 p-4 bg-[#e8e0dc] rounded-lg"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Titel-Bereich - responsiver Abstand */}
+        // Titel-Bereich - responsiver Abstand
         <div className="absolute top-12 md:top-12 left-4 right-4 z-20 text-center">
           <h2 className="text-2xl font-fira text-[#889cab] truncate">
             {categoryName}
           </h2>
         </div>
 
-        {/* Close Button */}
+        // Close Button
         <button
           onClick={onClose}
           className="absolute -top-4 -right-4 w-8 h-8 bg-[#889cab] text-white rounded-full flex items-center justify-center hover:bg-black transition-colors duration-300 z-10"
@@ -139,9 +142,9 @@ const ImageGallery = ({ images, isOpen, onClose, categoryName }) => {
           ×
         </button>
 
-        {/* Gallery Container - nach unten verschoben für Titel */}
+        // Gallery Container - nach unten verschoben für Titel
         <div className="relative h-[70vh] flex items-center mt-10 md:mt-24">
-          {/* Navigation Arrows */}
+          // Navigation Arrows
           <button
             onClick={handlePrevImage}
             className={`
@@ -222,7 +225,7 @@ const ImageGallery = ({ images, isOpen, onClose, categoryName }) => {
             </svg>
           </button>
 
-          {/* Image Container */}
+          // Image Container
           <div
             className="w-full h-full relative overflow-hidden"
             onTouchStart={onTouchStart}
@@ -249,7 +252,7 @@ const ImageGallery = ({ images, isOpen, onClose, categoryName }) => {
           </div>
         </div>
 
-        {/* Image Counter */}
+        // Image Counter
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#889cab] text-white px-4 py-2 rounded-full font-montserrat">
           {currentImageIndex + 1} / {images.length}
         </div>
@@ -283,7 +286,9 @@ const CategoryCard = ({ category }) => {
     </div>
   );
 };
+*/
 
+// Die Hauptkomponente mit einer Coming Soon Anzeige
 export default function Projekte() {
   return (
     <Content>
@@ -296,10 +301,36 @@ export default function Projekte() {
           </RegularText>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projectCategories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
-          ))}
+        {/* Coming Soon Anzeige */}
+        <div className="flex flex-col items-center justify-center py-20">
+          <div className="bg-[#e8e0dc] p-8 rounded-lg shadow-md border border-[#ded5d0] w-full max-w-2xl text-center">
+            <h2 className="text-2xl font-fira text-[#889cab] mb-6">Coming Soon</h2>
+            <div className="mb-8">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="80" 
+                height="80" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="#889cab" 
+                strokeWidth="1.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="mx-auto mb-4"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </div>
+            <p className="font-montserrat text-base mb-4">
+              Unsere Projektgalerie wird derzeit aktualisiert. Hier finden Sie bald eine Übersicht unserer 
+              Referenzprojekte aus verschiedenen Arbeitsbereichen.
+            </p>
+            <p className="font-montserrat text-sm text-[#889cab]">
+              Wir bitten um Ihr Verständnis und laden Sie ein, später wieder vorbeizuschauen.
+            </p>
+          </div>
         </div>
       </div>
     </Content>
