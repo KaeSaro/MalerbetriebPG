@@ -83,8 +83,9 @@ export default function AGB() {
             <Title withStroke>§4 Preise und Zahlung</Title>
             <RegularText>
               Die vereinbarten Preise verstehen sich zuzüglich der gesetzlichen
-              Mehrwertsteuer. Rechnungen sind innerhalb von 14 Tagen nach
-              Rechnungsstellung ohne Abzug zur Zahlung fällig.
+              Mehrwertsteuer. Rechnungen sind innerhalb der im Angebot
+              aufgeführten Frist nach Rechnungsstellung ohne Abzug zur Zahlung
+              fällig.
             </RegularText>
             <RegularText>
               Bei größeren Aufträgen ist der Auftragnehmer berechtigt,
@@ -109,10 +110,11 @@ export default function AGB() {
           <div className="space-y-8">
             <Title withStroke>§6 Gewährleistung</Title>
             <RegularText>
-              Die Gewährleistungsfrist für die erbrachten Leistungen beträgt 5
-              Jahre, beginnend mit der Abnahme der Leistungen. Für Arbeiten an
-              beweglichen Sachen, wie zum Beispiel Türen oder Fenster, sowie für
-              Reparaturarbeiten beträgt die Gewährleistungsfrist 1 Jahr.
+              Die Gewährleistungsfrist für die erbrachten Leistungen richtet
+              sich nach dem Auftrag und den jeweiligen Leistungen, beginnend mit
+              der Abnahme der Leistungen. Für Arbeiten an beweglichen Sachen,
+              wie zum Beispiel Türen oder Fenster, sowie für Reparaturarbeiten
+              beträgt die Gewährleistungsfrist 1 Jahr.
             </RegularText>
           </div>
 
