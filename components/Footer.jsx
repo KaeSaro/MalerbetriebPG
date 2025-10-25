@@ -17,7 +17,7 @@ export function Footer() {
                 Malerbetrieb Pascal Gerdes
               </Title>
               <p className="text-[#ffffff] text-[20px] font-montserrat">
-              Farbe. Struktur. Präzision.
+                Farbe. Struktur. Präzision.
               </p>
             </div>
           </div>
@@ -55,12 +55,12 @@ export function Footer() {
               >
                 Kontakt
               </Link>
-              <Link
+              {/* <Link
                 href="/team"
                 className="text-[#000000] text-[18px] hover:text-white"
               >
                 Team
-              </Link>
+              </Link> */}
               <Link
                 href="/impressum"
                 className="text-[#000000] text-[18px] hover:text-white"

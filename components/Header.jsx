@@ -8,7 +8,7 @@ const menuItems = [
   { name: "Home", href: "/" },
   { name: "Leistungen", href: "/leistungen" },
   { name: "Projekte", href: "/projekte" },
-  { name: "Team", href: "/team" },
+  // { name: "Team", href: "/team" },
   { name: "Kontakt", href: "/kontakt" },
 ];
 
